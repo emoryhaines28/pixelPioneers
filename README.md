@@ -1,22 +1,27 @@
 # pixelPioneers
 Web Midterm
 
-Home Page
+Home Page - Maddy
+-background image
 
-About Us
+About Us - Emilia
 - ol and ul, list
 
-Form for Skintype
+Form for Skintype - Emory
 -javascript
 -form
 
-Contact
+Contact - Emilia
 
-Results Page
 
-Three different skintype pages
+Three different skintype pages - Belle/Emory
 -associative array
 
-External style sheet
+External style sheet - Maddy
 -Navigation
 -Header
+
+Aesthetic
+-clean girl
+-minimalist
+
