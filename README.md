@@ -16,6 +16,9 @@ Contact - Emilia
 
 Three different skintype pages - Belle/Emory
 -associative array
+-oily = belle
+-combination = belle
+-dry = emory
 
 External style sheet - Maddy
 -Navigation
