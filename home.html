@@ -1,3 +1,49 @@
 <html>
-    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width", initial-scale="1">    
+        <title> homepage </title>
+        <link rel="stylesheet" href="mystyles.css">
+        <style type="text/css">
+            body {
+                background-image: url('background.jpg'); 
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;  
+            }
+        </style>  
+    </head>
+    <body>
+        <nav>
+            <div class="bar">
+                <a href="home.html">
+                    <img src="logo.png" alt="Logo" class="logo"> 
+                </a>
+                <div class="navlinks">
+                    <a href="form.html" class="navlink">your skin type</a>
+                    <a href="skincolumns.html" class="navlink">skin types</a>
+                    <a href="about.html" class="navlink">about us</a>
+                    <a href="contact.html" class="navlink">contact us</a>
+                </div>
+                <a href="#" class="hamburger">&#9776;</a>      
+            </div>
+        </nav>
+        <footer>
+            <div class="footercontent" >
+                <img src="logo.png" alt="Logo" class="logofoot"> 
+                <p>&copy;2024 peau.  All rights reserved.</p>
+            </div>
+        </footer>
+
+        <script>
+           document.addEventListener('DOMContentLoaded', function () {
+            const hamburger = document.querySelector('.hamburger');
+            const navLinks = document.querySelector('.navlinks');
+
+            hamburger.addEventListener('click', function () {
+                navLinks.classList.toggle('show');
+            });
+            })
+         </script>
+    </body>
 </html>

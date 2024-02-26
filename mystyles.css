@@ -1,0 +1,121 @@
+/* colors to work with: 
+    color: #F5CC97;
+    color: F5BD33;
+    color: #F55D33;
+    color: #F57F33;
+
+font:  
+    font-family: 'American Typewriter', serif;
+    font-weight: normal; */
+
+nav {
+    background-color:  #F55D33;; 
+    position: fixed;
+    width: 100%; 
+    z-index: 1000;
+    font-size: 23px;
+}
+
+nav a {
+    color:#F5CC97;
+    text-decoration: none;
+    font-family: 'American Typewriter', serif;
+    font-weight: normal;
+    margin-right: 30px; 
+}
+
+nav a:hover {
+    color: F5BD33;
+}
+
+nav .bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.logo {
+    width: 200px;
+    padding: 10px;
+    float: left;
+}
+
+.logofoot {
+    width: 80px;
+    float: right;
+}
+
+footer {
+    background-color: #F55D33 ; 
+    color: #F5CC97; 
+    text-align: center;
+    padding: .5px 0; 
+    position: fixed; 
+    bottom: 0; 
+    width: 100%; 
+    z-index: 1000; 
+    left: 0;
+}
+.footercontent {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    margin-right: 10px;
+    font-size: 14px;
+}
+
+.footercontent img {
+    margin-right: 10px;
+}
+
+@media screen and (min-width: 900px) {
+    .hamburger {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 899px) {
+    .hamburger {
+        display: block;
+        font-size: 40px
+    }
+
+    .navlinks.show {
+        display: block;
+        padding: 10px 0;
+        margin-right: 10px;
+    }
+
+    .navlinks {
+        background-color: #F55D33;
+        position: absolute;
+        top: calc(100% + 10px);
+        right: 10px;
+        width: 100%;
+        max-width: 200px;
+        text-align: center; 
+        display: flex; /* Ensure flex display */
+        flex-direction: column; /* Ensure links stack vertically */
+        align-items: center; 
+        display: none;
+    }
+
+    .navlinks a {
+        margin: 0; /* Remove default margin */
+        padding: 10px 0; /* Add padding for spacing */
+        margin-top: 0px;
+        display: block;
+    }
+}
+
+
+@media screen and (max-width: 530px) {
+    .footercontent {
+        font-size: 10px;
+    }
+}
