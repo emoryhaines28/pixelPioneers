@@ -19,6 +19,17 @@
       flex: 1; /* Each column takes an equal portion of the available space */
       padding: 20px;
       box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .column button {
+      background-color: #F55D33; /* Set a background color for the buttons */
+      color: #fff; /* Set text color to white or another contrasting color */
+      padding: 10px; /* Add padding for better visibility */
+      border: none; /* Remove button border if desired */
+      cursor: pointer; /* Add pointer cursor for better UX */
     }
 
     /* Add your own styles to customize each column */
@@ -33,6 +44,7 @@
     .column:nth-child(3) {
       background-color: #d9d9d9;
     }
+
   </style>
 </head>
 <body>
@@ -60,20 +72,24 @@
           <p>&copy;2024 peau.  All rights reserved.</p>
       </div>
   </footer>
-  
+
   <div class="column">
     <h2>Column 1</h2>
     <p>This is the content of the first column.</p>
+    <button onclick="window.location.href='dry.html'">Dry Skin</button>
   </div>
 
   <div class="column">
     <h2>Column 2</h2>
     <p>This is the content of the second column.</p>
+    <button onclick="window.location.href='combination.html'">Combination Skin</button>
   </div>
 
   <div class="column">
     <h2>Column 3</h2>
     <p>This is the content of the third column.</p>
+    <button onclick="window.location.href='oily.html'">Oily Skin</button>
   </div>
+
 </body>
 </html>
