@@ -15,7 +15,8 @@ Form for Skintype - Emory
 Contact - Emilia
 
 All three skintypes page - Emory 
--at least one page must have multiple columns
+-at least one page must have multiple columns - complete
+-need to fix bakcground colors
 
 Three different skintype pages - Belle/Emory
 -associative array
