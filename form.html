@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+<head>
+<title> Contact </title>
+
+<!-- Internal Stylesheet -->
+<style type="text/css">
+  body {
+    font-family: Arial, sans-serif;
+    background-image: url(images/bones.jpg); 
+    background-size: cover; /* Ensures the background image covers the entire body */
+    background-position: center; /* Centers the background image */
+    background-repeat: no-repeat; /* Prevents the background image from repeating */
+    height: 100vh; /* Set the body height to 100% of the viewport height */
+    color: #333;
+   
+  }
+
+  #form-container {
+      margin: auto;
+      background-color: #ffffff; /* Set the background color for the form container */
+      padding: 20px;
+      max-width: 575px; /* Set a maximum width for the form container */
+      width: 100%; /* Make sure it takes 100% of the available width up to the maximum width */
+      border-radius: 10px; /* Rounded corners */
+      border: 2px solid gray;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Box shadow for a subtle effect */
+  }
+
+  h2 {
+    color: white;
+  }
+
+</style>
+<!-- Link to external styleheet -->
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <h2>
+    **Let's Get Started!**
+    Ready to give your dog the joy of daily walks? 
+    Contact us to schedule a complimentary meet-and-greet, 
+    where we'll get to know you and your furry friend. Join the 
+    Woof Woof Walks family, where every walk is an adventure!
+  </h2>
+
+  <!-- Contact Form -->
+  <div id="form-container">
+  <h1>Form Demo</h1>
+	<form action='#' method='get'>
+    <label>Name:</label> <input type="text" name='name' id='the_name'>
+    <br /><br />
+    Dog Name: <input type = "text" name="dog_name" id="doggy_name">
+    <br /><br />
+    Does your dog have allergies? 
+      <input type="radio" name="allergy_y" value="yes">Yes
+      <input type="radio" name="allergy_n" value="no">No
+      <br /><br />
+    Dog Size Group:
+      <select name="dogSize">
+      <option value="small">Small</option>
+      <option value="medium">Medium</option>
+      <option value="large">Large</option></select>
+      <br /><br />
+    Services you are interested in (pick all that apply):
+      <input type="checkbox" name="chkGroupWalk" value="group_walk">Group Walk
+      <input type="checkbox" name="chkSoloWalk" value="solo_walk">Solo Walk
+      <input type="checkbox" name="chkAdventureHike" value="adventure_hike">Adventure Hike
+      <input type="checkbox" name="chkPetSitting" value="pet_sitting">Pet Sitting
+      <br /><br />	
+    
+    <input type = "submit" value = "Go!">
+	</form>
+  </div>
+
+  <!-- Fixed logo image in bottom right hand corner -->
+  <img class="image-logo" src="images/logo.png" width="70px">
+
+  <!-- Fixed naviagtion bar on left hand corner -->
+	<ul class="nav">
+    <h3>Navigation</h3>
+    <li><a href="index.html">Home</a></li>
+		<li><a href="services.html">Services</a></li>
+		<li><a href="contactPage.html">Contact</a></li>
+	</ul>
+</body>
+
+</html>
