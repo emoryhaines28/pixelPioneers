@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skin Columns Page</title>
+  <link rel="stylesheet" href="mystyles.css">
+  <style>
+    body {
+      font-family: 'American Typewriter', serif;
+      color: #333;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      min-height: 100vh; /* Ensure the body takes at least the full height of the viewport */
+    }
+
+    .column {
+      flex: 1; /* Each column takes an equal portion of the available space */
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    /* Add your own styles to customize each column */
+    .column:nth-child(1) {
+      background-color: #f2f2f2;
+    }
+
+    .column:nth-child(2) {
+      background-color: #e6e6e6;
+    }
+
+    .column:nth-child(3) {
+      background-color: #d9d9d9;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- navigation bar -->
+  <nav>
+    <div class="bar">
+        <a href="home.html">
+            <img src="images/logo.png" alt="Logo" class="logo"> 
+        </a>
+        <div class="navlinks">
+            <a href="form.html" class="navlink">your skin type</a>
+            <a href="skincolumns.html" class="navlink">skin types</a>
+            <a href="about.html" class="navlink">about us</a>
+            <a href="contact.html" class="navlink">contact us</a>
+        </div>
+        <a href="#" class="hamburger">&#9776;</a>      
+    </div>
+  </nav>
+
+  <!-- footer -->
+  <footer>
+      <div class="footercontent" >
+          <img src="images/logo.png" alt="Logo" class="logofoot"> 
+          <p>&copy;2024 peau.  All rights reserved.</p>
+      </div>
+  </footer>
+  
+  <div class="column">
+    <h2>Column 1</h2>
+    <p>This is the content of the first column.</p>
+  </div>
+
+  <div class="column">
+    <h2>Column 2</h2>
+    <p>This is the content of the second column.</p>
+  </div>
+
+  <div class="column">
+    <h2>Column 3</h2>
+    <p>This is the content of the third column.</p>
+  </div>
+</body>
+</html>
