@@ -1,23 +1,15 @@
 <!doctype html>
 <html>
 <head>
-<title> Contact </title>
+<title> Skin Type Form </title>
 
+<link rel="stylesheet" href="mystyles.css">
 <!-- Internal Stylesheet -->
 <style type="text/css">
-  body {
-    font-family: Arial, sans-serif;
-    background-image: url(images/bones.jpg); 
-    background-size: cover; /* Ensures the background image covers the entire body */
-    background-position: center; /* Centers the background image */
-    background-repeat: no-repeat; /* Prevents the background image from repeating */
-    height: 100vh; /* Set the body height to 100% of the viewport height */
-    color: #333;
-   
-  }
 
   #form-container {
       margin: auto;
+      margin-top: 30px;
       background-color: #ffffff; /* Set the background color for the form container */
       padding: 20px;
       max-width: 575px; /* Set a maximum width for the form container */
@@ -28,62 +20,88 @@
   }
 
   h2 {
-    color: white;
+    color:#F55D33;
   }
 
 </style>
-<!-- Link to external styleheet -->
-<link rel="stylesheet" href="styles.css">
+
 </head>
 
 <body>
-  <h2>
-    **Let's Get Started!**
-    Ready to give your dog the joy of daily walks? 
-    Contact us to schedule a complimentary meet-and-greet, 
-    where we'll get to know you and your furry friend. Join the 
-    Woof Woof Walks family, where every walk is an adventure!
-  </h2>
+  <!-- navigation bar -->
+  <nav>
+    <div class="bar">
+        <a href="home.html">
+            <img src="images/logo.png" alt="Logo" class="logo"> 
+        </a>
+        <div class="navlinks">
+            <a href="form.html" class="navlink">your skin type</a>
+            <a href="skincolumns.html" class="navlink">skin types</a>
+            <a href="about.html" class="navlink">about us</a>
+            <a href="contact.html" class="navlink">contact us</a>
+        </div>
+        <a href="#" class="hamburger">&#9776;</a>      
+    </div>
+  </nav>
 
-  <!-- Contact Form -->
+  <!-- footer -->
+  <footer>
+      <div class="footercontent" >
+          <img src="images/logo.png" alt="Logo" class="logofoot"> 
+          <p>&copy;2024 peau.  All rights reserved.</p>
+      </div>
+  </footer>
+
+  <!-- Skin Form -->
   <div id="form-container">
-  <h1>Form Demo</h1>
+  <h1>What is your skin type?</h1>
 	<form action='#' method='get'>
     <label>Name:</label> <input type="text" name='name' id='the_name'>
     <br /><br />
-    Dog Name: <input type = "text" name="dog_name" id="doggy_name">
+    <label>Email:</label> <input type="text" name='email' id='the_email'>
     <br /><br />
-    Does your dog have allergies? 
-      <input type="radio" name="allergy_y" value="yes">Yes
-      <input type="radio" name="allergy_n" value="no">No
-      <br /><br />
-    Dog Size Group:
-      <select name="dogSize">
-      <option value="small">Small</option>
-      <option value="medium">Medium</option>
-      <option value="large">Large</option></select>
-      <br /><br />
-    Services you are interested in (pick all that apply):
-      <input type="checkbox" name="chkGroupWalk" value="group_walk">Group Walk
-      <input type="checkbox" name="chkSoloWalk" value="solo_walk">Solo Walk
-      <input type="checkbox" name="chkAdventureHike" value="adventure_hike">Adventure Hike
-      <input type="checkbox" name="chkPetSitting" value="pet_sitting">Pet Sitting
-      <br /><br />	
+    Which options best describes your experience with foundation or makeup?
+      <input type="checkbox" name="slide" value="Makeupslide">Makeup tends to slide off easily
+      <input type="checkbox" name="good" value="well">Makeup adheres well, no sliding or flaking
+      <input type="checkbox" name="cake" value="cakey">Makeup tends to cake in some areas while disappearing in others
+    <br /><br />
+    Which statement best describes the size of your pores?
+      <select name="poreSize">
+      <option value="enlarged">Enlarged</option>
+      <option value="small">Small and barely visible</option>
+      <option value="mix">A mix of enlarged and small</option></select>
+    <br /><br />
+    How does your skin usually react to cleansers or soaps?
+      <select name="cleanser">
+      <option value="tight">Feels tight and dry</option>
+      <option value="balanced">Feels comfortable and balanced</option>
+      <option value="oily">Becomes oily shortly after washing</option></select>
+    <br /><br />	
+    How often do you experience breakouts or acne?
+      <select name="breakouts">
+      <option value="frequent">Frequently</option>
+      <option value="occasional">Occasionally</option>
+      <option value="rarely">Rarely</option></select>
+    <br /><br />	
     
     <input type = "submit" value = "Go!">
 	</form>
   </div>
 
-  <!-- Fixed logo image in bottom right hand corner -->
-  <img class="image-logo" src="images/logo.png" width="70px">
-
-  <!-- Fixed naviagtion bar on left hand corner -->
-	<ul class="nav">
-    <h3>Navigation</h3>
-    <li><a href="index.html">Home</a></li>
-		<li><a href="services.html">Services</a></li>
-		<li><a href="contactPage.html">Contact</a></li>
-	</ul>
 </body>
 
 </html>
+
+
+
+<!-- old style -->
+<!-- body {
+    font-family: Arial, sans-serif;
+    background-image: url(images/bones.jpg); 
+    background-size: cover; /* Ensures the background image covers the entire body */
+    background-position: center; /* Centers the background image */
+    background-repeat: no-repeat; /* Prevents the background image from repeating */
+    height: 100vh; /* Set the body height to 100% of the viewport height */
+    color: #333;
+   
+  } -->
