@@ -66,6 +66,7 @@
       padding: 10px 20px;
       margin-top: 10px;
       cursor: pointer;
+      margin: 10px;
   }
 
 </style>
@@ -199,7 +200,7 @@
           document.getElementById('toner').value = "tight";
       }
 
-      skinPage.onclick = function () {
+      skinPageButton.onclick = function () {
         navigateToSkinPage(skinType);
       }
 
@@ -207,9 +208,6 @@
       popup.appendChild(skinPageButton);
       document.body.appendChild(popup);
 
-      setTimeout(function () {
-      document.body.removeChild(popup);
-      }, 5000);
     }
 
     function navigateToSkinPage(skinType) {
