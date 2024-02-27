@@ -118,9 +118,38 @@
         others may feel tight or oily</option></select>
     <br /><br />	
     
-    <input type = "submit" value = "Go!">
+    <input type = "submit" value = "Go!" onclick="processFormData()">
 	</form>
   </div>
+
+  <script>
+    function processFormData() {
+        var name = document.getElementById('the_name').value;
+        var email = document.getElementById('the_email').value;
+
+        // Checkbox values
+        var slide = document.getElementById('slide').checked;
+        var good = document.getElementById('good').checked;
+        var cake = document.getElementById('cake').checked;
+
+        // Other form values
+        var poreSize = document.getElementById('poreSize').value;
+        var cleanser = document.getElementById('cleanser').value;
+        var breakouts = document.getElementById('breakouts').value;
+        var toner = document.getElementById('toner').value;
+
+        // Now you can use these variables as needed (e.g., perform client-side validation, update UI, etc.)
+        console.log("Name: " + name);
+        console.log("Email: " + email);
+        console.log("Slide: " + slide);
+        console.log("Good: " + good);
+        console.log("Cake: " + cake);
+        console.log("Pore Size: " + poreSize);
+        console.log("Cleanser: " + cleanser);
+        console.log("Breakouts: " + breakouts);
+        console.log("Toner: " + toner);
+    }
+  </script>
 
 </body>
 
