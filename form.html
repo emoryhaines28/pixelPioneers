@@ -33,17 +33,18 @@
 
   div.checkbox-group {
     margin-bottom: 5px;
+    margin-top: 10px; /* Add a smaller top margin for separation */
   }
-  
 
   div.checkbox-group input[type="checkbox"] {
-    display: inline-block;
-    margin-bottom: 5px; 
+      display: inline-block;
+      margin-bottom: 5px;
+      margin-right: 5px; /* Add a right margin for separation */
   }
 
   div.checkbox-group label {
-    display: block;
-    margin-bottom: 5px; 
+      display: block;
+      margin-bottom: 5px;
   }
 
   .popup {
@@ -105,6 +106,10 @@
     <label>Name:</label> <input type="text" name='name' id='the_name'>
     <br /><br />
     <label>Email:</label> <input type="text" name='email' id='the_email'>
+    <br /><br />
+    <label>Do you consent to email notifications?</label> 
+    <input type="radio" id=consent_yes name='email_yes' value=yes> Yes
+    <input type="radio" id=consent_no name='email_no' value=no> No
     <br /><br />
       <div class="checkbox-group">
         <label> Which options best describes your experience with foundation or makeup?</label>
@@ -191,6 +196,8 @@
           document.body.removeChild(popup);
           document.getElementById('the_name').value = "";
           document.getElementById('the_email').value = "";
+          document.getElementById('consent_yes').checked = false; 
+          document.getElementById('consent_no').checked = false;
           document.getElementById('slide').checked = false;
           document.getElementById('good').checked = false;
           document.getElementById('cake').checked = false;

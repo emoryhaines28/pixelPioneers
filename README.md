@@ -9,8 +9,8 @@ About Us - Emilia
 - ol and ul, list
 
 Form for Skintype - Emory
--javascript
--form = done
+-javascript = done
+-form w/ three types = done
 
 Contact - Emilia
 
