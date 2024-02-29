@@ -7,7 +7,6 @@
   <link rel="stylesheet" href="mystyles.css">
   <style type="text/css">
     body {
-      font-family: 'American Typewriter', serif;
       color: #333;
       margin: 0;
       padding: 0;
@@ -15,6 +14,11 @@
       min-height: 100vh; /* Ensure the body takes at least the full height of the viewport */
     }
 
+    h3 {
+      font-family: 'American Typewriter', serif;
+      font-weight: normal;
+      font-size: 20px;
+    }
     .column {
       flex: 1; /* Each column takes an equal portion of the available space */
       padding: 20px;
@@ -28,7 +32,7 @@
       font-family: 'American Typewriter', serif;
       background-color: #F55D33; /* Set a background color for the buttons */
       color: #F5CC97; /* Set text color to white or another contrasting color */
-      padding: 10px; /* Add padding for better visibility */
+     /* Add padding for better visibility */
       border: none; /* Remove button border if desired */
       cursor: pointer; /* Add pointer cursor for better UX */
     }
@@ -62,16 +66,16 @@
       </div>
   </footer>
 
-  <div class="column" style=" background-color: #F57F33;">
-    <button onclick="window.location.href='dry.html'">Dry Skin</button>
+  <div class="column" style=" background-color: #E8E2C5;">
+    <button onclick="window.location.href='dry.html'"> <h3>Dry Skin</h3></button>
   </div>
 
   <div class="column" style=" background-color: #F5CC97;">
-    <button onclick="window.location.href='combination.html'">Combination Skin</button>
+    <button onclick="window.location.href='combination.html'"><h3> Combination Skin </h3></button>
   </div>
 
   <div class="column" style=" background-color: #F57F33;">
-    <button onclick="window.location.href='oily.html'">Oily Skin</button>
+    <button onclick="window.location.href='oily.html'"><h3> Oily Skin </h3></button>
   </div>
 
 </body>
