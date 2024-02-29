@@ -78,5 +78,17 @@
     <button onclick="window.location.href='oily.html'"><h3> Oily Skin </h3></button>
   </div>
 
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+            const hamburger = document.querySelector('.hamburger');
+            const navLinks = document.querySelector('.navlinks');
+
+            hamburger.addEventListener('click', function () {
+                navLinks.classList.toggle('show');
+            });
+    })
+        
+  </script>
+
 </body>
 </html>
