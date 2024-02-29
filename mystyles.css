@@ -38,6 +38,8 @@ nav .bar {
 body {
     margin: 0;
     padding: 0;
+    font-family: 'American Typewriter', serif;
+    font-weight: normal;
 }
 
 .logo {
@@ -68,6 +70,8 @@ footer {
     justify-content: right;
     margin-right: 10px;
     font-size: 14px;
+    font-family: 'American Typewriter', serif;
+    font-weight: normal;
 }
 
 .footercontent img {
