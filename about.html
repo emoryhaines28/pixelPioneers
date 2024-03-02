@@ -6,10 +6,221 @@
         <title> about </title>
         <link rel="stylesheet" href="mystyles.css">
         <style type="text/css">
+
             body {
                 background-color: #F5CC97; 
+                display: flex;
+                justify-content: center;
+                align-items: center;
             }
-        </style>
+
+            .styled-box {
+                text-shadow: #F55D33;
+                color: #F55D33;
+                font-size: 40px;
+                text-align: center;
+                margin-left: 30px;
+                margin-right: 30px;
+                padding: 10px;
+                height: auto;
+                align-self: center;
+                margin-top: 100px;
+                background-color: #F5CC97;
+                border: 2px solid #F55D33;
+                border-radius: 10px;
+                background-color: rgba(255, 255, 255, 0.9)
+            }
+
+            .styled-box2 {
+                text-shadow: #F55D33;
+                color: #F5CC97;;
+                font-size: 40px;
+                text-align: center;
+                margin-left: 30px;
+                margin-right: 30px;
+                padding: 10px;
+                height: auto;
+                align-self: center;
+                align-content: center;
+                margin-top: 50px !important;
+                background-color: #F55D33;
+                border: 2px solid #FFF;
+                border-radius: 10px;
+                max-width: max-content;
+                align-self: center !important; 
+                width: fit-content; /* Adjust width to fit the content */
+                margin: 0 auto; /* Center horizontally */
+            }
+
+            @media only screen and (max-width: 768px) {
+                .team-member {
+                    width: 100%;
+                    max-width: 100%;
+                    margin-bottom: 20px; /* Add some space between stacked team members */
+                }
+            }
+
+            @media only screen and (max-width: 768px) {
+                .styled-box2 {
+                    width: 80%;
+                    height: 90%
+                }
+            }
+
+            @media only screen and (max-width: 768px) {
+                .styled-box {
+                    width: 80%;
+                    height: 90%
+                }
+            }
+
+        .about-section {
+            background-image: url('images/about2.jpg'); 
+            background-size: cover;
+            background-position: center;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            margin-top: 60px;
+            border: 4px solid #F55D33;
+            
+        }
+
+        .about-section p {
+            font-size: 18px;
+            color: #333;
+            z-index: 1; 
+            position: relative; 
+        }
+
+        .team-section {
+            margin-top: 40px;
+            margin-top: 40px;
+            display: flex;
+            flex-wrap: wrap; /* Allow items to wrap onto multiple lines */
+            justify-content: space-between; /* Distribute items evenly */
+        }
+
+        .team-section h2 {
+            color: #F55D33;
+            font-size: 35px;
+            margin-left: 40px; 
+        }
+
+        .team-member {
+            text-align: center;
+            margin-bottom: 40px;
+            width: calc(90% - 10px); /* Set the width to 50% with some margin */
+            max-width: calc(50% - 20px);
+        }
+
+        .team-member img {
+            width: 300px;
+            height: 250px;
+            border-radius: 50%;
+            border: 6px solid #F55D33;
+        }
+
+        .team-member h3 {
+            margin-top: 20px;
+            color: #333;
+            font-size: 24px;
+        }
+
+        .team-member p b {
+            margin-top: 30px;
+            color: #333;
+            font-size: 24px;
+        }
+
+        .team-member p {
+            color: #666;
+            margin-top: 1px !important;
+        }
+
+        .values-section ul li {
+            margin-bottom: 10px; 
+        }
+
+
+        .values-section h1 {
+            color: #FFF !important; /* Title color */
+            font-size: 36px; /* Title font size */
+            margin-bottom: 20px;
+        }
+
+        .values-section {
+            background-image: url('images/values2.jpg');
+            background-size: cover;
+            background-position: center;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            margin-top: 40px;
+            margin-bottom: 100px;
+            border: 4px solid #F55D33;
+        }
+
+        .values-section .styled-box {
+            text-shadow: #F55D33;
+            color: #F55D33;
+            font-size: 18px; /* Adjust font size as needed */
+            text-align: center;
+            margin: 0 auto; /* Center the box horizontally */
+            background-color: rgba(255, 255, 255, 0.8); 
+            border: 2px solid #F55D33;
+            border-radius: 10px;
+            padding: 5px; /* Add padding for spacing around the content */
+            max-width: 90%; /* Set maximum width to ensure it fits the text */
+        }
+
+        .values-section p {
+            margin-top: 10px;
+            font-size: 18px;
+            color: #333;
+            z-index: 1; 
+            position: relative; 
+        }
+
+
+        .about-section h1 {
+            color: #FFF !important; /* Title color */
+            font-size: 36px; /* Title font size */
+            margin-bottom: 20px;
+            margin-top: 5px;
+        }
+
+        .values-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .values-list li {
+            font-size: 18px;
+            color: #333;
+            position: relative;
+        }
+
+        .values-list li:before {
+            content: "\2022"; /* Bullet character */
+            color: #F55D33; /* Bullet color */
+        }
+
+
+        .values-section h1 {
+            color: #FFF !important; /* Title color */
+            font-size: 36px; /* Title font size */
+            margin-bottom: 20px;
+        }
+
+        .styled-box p {
+            font-size: 18px;
+            color: #333;
+            margin: 0;
+        }
+
+
+    </style>
     </head>
     <body>
         <nav>
@@ -26,6 +237,55 @@
                 <a href="#" class="hamburger">&#9776;</a>      
             </div>
         </nav>
+        <div class="container">
+            <section class="about-section">
+                <h1>About Us</h1>
+                <p class="styled-box">Welcome to peau, your destination for all things radiant, personal, and beautiful. peau was founded to address an 
+                    unmet need in the skincare industry: <b>skincare that's personal</b>
+                </p>
+            </section>
+            <div class="styled-box2">Meet Our Team</div>
+            <section class="team-section">
+                <!-- <h2 class="styled-box2">Meet Our Team</h2> -->
+                <div class="team-member">
+                    <img src="images/emorypic.jpg" id="TeamMember 1">
+                </br> </br>
+                    <p><b>Emory Haines</b></p>
+                    <p>Co-Founder and Chief of Branding</p>
+                </div>
+                <div class="team-member">
+                    <img src="images/epic.jpg" id="TeamMember 2">
+                </br> </br>
+                    <p><b>Emilia Nathan</b></p>
+                    <p>Co-Founder and Chief of Data</p>
+                </div>
+                <div class="team-member">
+                    <img src="images/epic.png" id="TeamMember 3">
+                </br> </br>
+                    <!-- <h3>Emilia Nathan</h3> -->
+                    <p><b>Emilia Nathan</b></p>
+                    <p>Skincare Specialist</p>
+                </div>
+                <div class="team-member">
+                    <img src="images/epic.png" id="TeamMember 3">
+                </br> </br>
+                    <p><b>Name 4</b></p>
+                    <p>Skincare Specialist</p>
+                </div>
+            </section>
+        <section class="values-section">
+            <h1>Our Values</h1>
+            <div class="styled-box">
+            <ul class="values-list">
+                <li>Quality ingredients sourced sustainably by our team of skin experts, the highest standard of ingredients in the industry</li>
+                <li>Deep commitment to endorsing brands with cruelty-free testing, practices, and commitment to ending animal testing &nbsp;&nbsp;&nbsp;&nbsp;</li>
+                <li>Endorsing brands that are explicit about their product formulations, working conditions, and environmental practices &nbsp;</li>
+                <li>Empowerment of all individuals through education about skin, the beauty industry, body positivity, and ethical beauty &nbsp;</li>
+                <li>Supporting diversity and inclusivity in beauty by uplifting voices of individuals traditionally absent in beauty spaces &nbsp;&nbsp;&nbsp;&nbsp;</li>
+            </ul>
+        </div>
+        </section>
+    </div>
         <footer>
             <div class="footercontent" >
                 <img src="images/logo.png" alt="Logo" class="logofoot"> 
