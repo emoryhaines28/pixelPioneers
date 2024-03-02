@@ -8,7 +8,7 @@
         <style type="text/css">
 
             body {
-                background-color: #F5CC97; 
+                background-color: #F8F4E3; 
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -16,7 +16,7 @@
 
             .styled-box {
                 text-shadow: #F55D33;
-                color: #F55D33;
+                color: #F8F4E3;
                 font-size: 40px;
                 text-align: center;
                 margin-left: 30px;
@@ -24,16 +24,16 @@
                 padding: 10px;
                 height: auto;
                 align-self: center;
-                margin-top: 100px;
+                margin-top: 50px;
                 background-color: #F5CC97;
                 border: 2px solid #F55D33;
                 border-radius: 10px;
-                background-color: rgba(255, 255, 255, 0.9)
+                background-color: rgba(248, 244, 227, 0.85); 
             }
 
             .styled-box2 {
                 text-shadow: #F55D33;
-                color: #F5CC97;;
+                color: #F8F4E3;;
                 font-size: 40px;
                 text-align: center;
                 margin-left: 30px;
@@ -44,46 +44,38 @@
                 align-content: center;
                 margin-top: 50px !important;
                 background-color: #F55D33;
-                border: 2px solid #FFF;
+                border: 2px solid #F8F4E3;
                 border-radius: 10px;
                 max-width: max-content;
                 align-self: center !important; 
-                width: fit-content; /* Adjust width to fit the content */
-                margin: 0 auto; /* Center horizontally */
+                width: fit-content; 
+                margin: 0 auto; 
             }
-
-            @media only screen and (max-width: 768px) {
-                .team-member {
-                    width: 100%;
-                    max-width: 100%;
-                    margin-bottom: 20px; /* Add some space between stacked team members */
-                }
-            }
-
-            @media only screen and (max-width: 768px) {
-                .styled-box2 {
-                    width: 80%;
-                    height: 90%
-                }
-            }
-
-            @media only screen and (max-width: 768px) {
-                .styled-box {
-                    width: 80%;
-                    height: 90%
-                }
-            }
+        
+        
 
         .about-section {
-            background-image: url('images/values.jpg'); 
+            background-image: url('images/bubbles.jpg'); 
             background-size: cover;
             background-position: center;
             padding: 40px;
             border-radius: 10px;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
             margin-top: 60px;
             border: 4px solid #F55D33;
             
+        }
+
+        @media only screen and (max-width: 650px) {
+            .team-section {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .team-member {
+                width: 90%; 
+                max-width: 90%; 
+                margin-bottom: 20px;
+            }
         }
 
         .about-section p {
@@ -97,20 +89,14 @@
             margin-top: 40px;
             margin-top: 40px;
             display: flex;
-            flex-wrap: wrap; /* Allow items to wrap onto multiple lines */
-            justify-content: space-between; /* Distribute items evenly */
-        }
-
-        .team-section h2 {
-            color: #F55D33;
-            font-size: 35px;
-            margin-left: 40px; 
+            flex-wrap: wrap; 
+            justify-content: space-between; 
         }
 
         .team-member {
             text-align: center;
             margin-bottom: 40px;
-            width: calc(90% - 10px); /* Set the width to 50% with some margin */
+            width: calc(90% - 10px); 
             max-width: calc(50% - 20px);
         }
 
@@ -138,15 +124,22 @@
             margin-top: 1px !important;
         }
 
+        .team-start h2 {
+            color: #F55D33;
+            font-size: 34px;
+            margin-left: 40px;
+            margin-top: 40px;
+        }
+
         .values-section ul li {
             margin-bottom: 10px; 
         }
 
-
-        .values-section h1 {
-            color: #FFF !important; /* Title color */
-            font-size: 36px; /* Title font size */
+        .values-section h2 {
+            color: #F8F4E3 !important; 
+            font-size: 36px; 
             margin-bottom: 20px;
+            margin-top: 0px;
         }
 
         .values-section {
@@ -155,23 +148,22 @@
             background-position: center;
             padding: 40px;
             border-radius: 10px;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-            margin-top: 40px;
+            margin-top: 20px;
             margin-bottom: 100px;
             border: 4px solid #F55D33;
         }
 
         .values-section .styled-box {
             text-shadow: #F55D33;
-            color: #F55D33;
-            font-size: 18px; /* Adjust font size as needed */
+            color: #F8F4E3 !important;
+            font-size: 18px;
             text-align: center;
-            margin: 0 auto; /* Center the box horizontally */
-            background-color: rgba(255, 255, 255, 0.8); 
+            margin: 0 auto; 
+            background-color: rgba(248, 244, 227, 0.85); 
             border: 2px solid #F55D33;
             border-radius: 10px;
-            padding: 5px; /* Add padding for spacing around the content */
-            max-width: 90%; /* Set maximum width to ensure it fits the text */
+            padding: 5px;
+            max-width: 90%; 
         }
 
         .values-section p {
@@ -182,10 +174,9 @@
             position: relative; 
         }
 
-
         .about-section h1 {
-            color: #FFF !important; /* Title color */
-            font-size: 36px; /* Title font size */
+            color: #F8F4E3 !important; 
+            font-size: 36px; 
             margin-bottom: 20px;
             margin-top: 5px;
         }
@@ -202,15 +193,15 @@
         }
 
         .values-list li:before {
-            content: "\2022"; /* Bullet character */
-            color: #F55D33; /* Bullet color */
+            content: "\2022";
+            color: #F55D33; 
         }
 
-
         .values-section h1 {
-            color: #FFF !important; /* Title color */
-            font-size: 36px; /* Title font size */
+            color: #F8F4E3 !important; 
+            font-size: 36px; 
             margin-bottom: 20px;
+            height: calc(50% - 10px); 
         }
 
         .styled-box p {
@@ -239,14 +230,15 @@
         </nav>
         <div class="container">
             <section class="about-section">
-                <h1>About Us</h1>
+                <h1 class=>About Us</h1>
                 <p class="styled-box">Welcome to peau, your destination for all things radiant, personal, and beautiful. peau was founded to address an 
                     unmet need in the skincare industry: <b>skincare that's personal</b>
                 </p>
             </section>
-            <div class="styled-box2">Meet Our Team</div>
+            <section class="team-start">
+                <h2>Meet Our Team</h2>
+            </section>
             <section class="team-section">
-                <!-- <h2 class="styled-box2">Meet Our Team</h2> -->
                 <div class="team-member">
                     <img src="images/emorypic.jpg" id="TeamMember 1">
                 </br> </br>
@@ -260,21 +252,21 @@
                     <p>Co-Founder and Chief of Data</p>
                 </div>
                 <div class="team-member">
-                    <img src="images/epic.png" id="TeamMember 3">
+                    <img src="images/mpic.jpg" id="TeamMember 3">
                 </br> </br>
-                    <!-- <h3>Emilia Nathan</h3> -->
-                    <p><b>Emilia Nathan</b></p>
-                    <p>Skincare Specialist</p>
+                    <p><b>Maddy Dumont</b></p>
+                    <p>Co-Founder and Chief Skincare Expert</p>
                 </div>
                 <div class="team-member">
-                    <img src="images/epic.png" id="TeamMember 3">
+                    <img src="images/ipic.jpg" id="TeamMember 3">
                 </br> </br>
-                    <p><b>Name 4</b></p>
-                    <p>Skincare Specialist</p>
+                    <p><b>Isabelle Bain</b></p>
+                    <p>Co-Founder and Chief of Design</p>
                 </div>
             </section>
         <section class="values-section">
-            <h1>Our Values</h1>
+            <h2>Our Values</h2>
+        </br>
             <div class="styled-box">
             <ul class="values-list">
                 <li>Quality ingredients sourced sustainably by our team of skin experts, the highest standard of ingredients in the industry</li>
