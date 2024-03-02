@@ -1,0 +1,113 @@
+<!doctype html> 
+<html>
+    <head> 
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width", initial-scale="1">    
+        <title> oily skin </title>
+        <link rel="stylesheet" href="mystyles.css">
+        <style type="text/css">
+            body {
+                background-color: #F5CC97; 
+            }
+            .info {
+                margin-top: 80px; 
+                margin-bottom: 80px; 
+                padding: 20px;
+                color: #F55D33; 
+            }
+            .small {
+                color: #c83f19;
+            }
+            .product-container {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: flex-start;
+                gap: 15px;
+            }
+            .product-box {
+                width: 150px;
+                height: 150px;
+                background-color: #f1e9c3;
+            }
+        </style>
+    </head>
+    <body>
+        <nav>
+            <div class="bar">
+                <a href="home.html">
+                    <img src="images/logo.png" alt="Logo" class="logo"> 
+                </a>
+                <div class="navlinks">
+                    <a href="form.html" class="navlink">your skin type</a>
+                    <a href="skincolumns.html" class="navlink">skin types</a>
+                    <a href="about.html" class="navlink">about us</a>
+                    <a href="contact.html" class="navlink">contact us</a>
+                </div>
+                <a href="#" class="hamburger">&#9776;</a>      
+            </div>
+        </nav>
+
+        <div class="info">
+            <h1>oily skin</h1>
+            <div class="small">
+                Oily skin, often characterized by its excessive sebum production, can leave you 
+            feeling like you're in a constant battle against shine and breakouts. But fret 
+            not, for understanding your skin type is the first step towards achieving that 
+            coveted balance. Oily skin tends to be prone to enlarged pores, acne, and a 
+            persistent sheen, especially in the T-zone area. However, there's a silver 
+            lining—oily skin also tends to age more slowly than other skin types, thanks to
+            its natural hydration. When it comes to caring for your oily canvas, it's all 
+            about striking the right balance. Opt for lightweight, oil-free products that 
+            won't clog pores or exacerbate shine. Incorporating gentle cleansers containing 
+            salicylic acid or benzoyl peroxide can help control excess oil and prevent 
+            breakouts. Don't shy away from moisturizers; instead, opt for non-comedogenic 
+            formulas to keep your skin hydrated without adding to the grease. And let's not 
+            forget the importance of sunscreen, even for oily skin types! Look for oil-free, 
+            broad-spectrum formulas to shield your skin from harmful UV rays without 
+            triggering breakouts. Remember, with the right skincare routine tailored to your 
+            oily skin's needs, you can achieve a radiant complexion that's balanced and 
+            blemish-free.
+
+            </br></br>These are our favorite products for oily skin and we hope you love them too!
+            </div>
+            <h2>cleansers</h2>
+            <div class="product-container">
+                <div class="product-box"></div>
+                <div class="product-box"></div>
+                <div class="product-box"></div>
+                <div class="product-box"></div>
+                <div class="product-box"></div>
+            </div>
+            <h2>moisturizers</h2>
+            <div class="product-container">
+                <div class="product-box"></div>
+                <div class="product-box"></div>
+                <div class="product-box"></div>
+            </div>
+            <h2>sunscreens</h2>
+            <div class="product-container">
+                <div class="product-box"></div>
+                <div class="product-box"></div>
+                <div class="product-box"></div>
+                <div class="product-box"></div>
+            </div>
+        </div>
+        
+        <footer>
+            <div class="footercontent" >
+                <img src="images/logo.png" alt="Logo" class="logofoot"> 
+                <p>&copy;2024 peau.  All rights reserved.</p>
+            </div>
+        </footer>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+             const hamburger = document.querySelector('.hamburger');
+             const navLinks = document.querySelector('.navlinks');
+    
+             hamburger.addEventListener('click', function () {
+                 navLinks.classList.toggle('show');
+             });
+             })
+          </script>
+    </body>
+</html>
