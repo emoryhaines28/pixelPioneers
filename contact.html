@@ -1,0 +1,243 @@
+<!doctype html> 
+<html>
+    <head> 
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width", initial-scale="1">    
+        <title> Contact </title>
+        <link rel="stylesheet" href="mystyles.css">
+        <style type="text/css">
+
+        body {
+            font-family: 'American Typewriter', serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin: 0; 
+            padding: 0; 
+            background-color: #F8F4E3;
+        }
+
+        .background-image {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('images/contact.jpg');
+            background-repeat: no-repeat; 
+            background-size: cover; 
+            background-position: center; 
+            z-index: -1; 
+        }
+
+        .background-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 248, 220, 0.4); 
+            z-index: -1; 
+        }
+
+        .contact-section {
+            margin-top: 150px;
+            text-align: center;
+        }
+
+        .contact-section h1 {
+            margin: 0 auto;
+            color: #F55D33;
+            font-size: 40px;
+            background-color: #F8F4E3;
+            border-radius: 10px;
+            border: 4px solid #F55D33;
+            padding: 10px;
+            width: 80%; 
+            max-width: 600px;
+            margin-left: auto; 
+            margin-right: auto;
+            background-color: #F8F4E3; 
+            padding: 10px 20px;
+            border-radius: 10px; 
+        }
+
+        .contact-form {
+            margin: 0 auto;
+            margin-top: 20px;
+            width: 80%;
+            max-width: 600px;
+            background-color: #F8F4E3;
+            padding: 20px;
+            border-radius: 10px;
+            border: 4px solid #F55D33;
+            margin-bottom: 150px;
+        }
+
+        .contact-form input[type="text"],
+        .contact-form input[type="email"],
+        .contact-form textarea {
+            font-family: 'American Typewriter', serif;
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .contact-form input[type="submit"] {
+            background-color: #F55D33; 
+            color: #FFF;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            border-radius: 7px;
+            font-family: 'American Typewriter', serif;
+        }
+
+        .contact-form input[type="submit"]:hover {
+            background-color: #FF6347;
+        }
+
+        .rating {
+            font-weight: bold;
+            margin: 0 5px;
+            font-size: 20px;
+            color: #555;
+            margin-bottom: 10px;
+            text-align: center;
+            display: inline-flex;
+            justify-content: center;
+            align-items: left;
+        }
+
+        .rating label {
+            margin: 0 5px;
+        }
+
+        .rating input[type="radio"] {
+            display: none;
+        }
+
+        .rating label:before {
+            content: "\2605";
+            display: inline-block;
+            font-size: 25px;
+            color: #FFD700;
+            cursor: pointer;
+        }
+
+        .rating input[type="radio"]:checked + label:before {
+            color: #F55D33;
+        }
+
+        .question {
+            margin: 0 5px;
+            font-size: 20px;
+            color: #555;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        @media screen and (max-width: 600px) {
+            .select {
+                width: 90%; 
+            }
+
+            .title h2 {
+                font-size: 30px; 
+            }
+        }
+     
+        </style>
+    </head>
+    <body>
+        <div class="background-image"></div>
+        <div class="background-overlay"></div>
+        <nav>
+            <div class="bar">
+                <a href="home.html">
+                    <img src="images/logo.png" alt="Logo" class="logo"> 
+                </a>
+                <div class="navlinks">
+                    <a href="form.html" class="navlink">your skin type</a>
+                    <a href="skincolumns.html" class="navlink">skin types</a>
+                    <a href="about.html" class="navlink">about us</a>
+                    <a href="contact.html" class="navlink">contact us</a>
+                </div>
+                <a href="#" class="hamburger">&#9776;</a>      
+            </div>
+        </nav>
+        <div class="contact-section">
+            <h1>Contact Us</h1>
+            <div class="contact-form">
+                <form action="#" method="post">
+                    <input type="text" name="name" placeholder="Name" required><br>
+                    <input type="email" name="email" placeholder="Email" required><br>
+                    <div class="question">Rate Your Experience:</div>
+                    <div class="rating">
+                        <input type="radio" id="exprating1" name="exprating" value="1">
+                        <label for="exprating1">1</label>
+                        <input type="radio" id="exprating2" name="exprating" value="2">
+                        <label for="exprating2">2</label>
+                        <input type="radio" id="exprating3" name="exprating" value="3">
+                        <label for="exprating3">3</label>
+                        <input type="radio" id="exprating4" name="exprating" value="4">
+                        <label for="exprating4">4</label>
+                        <input type="radio" id="exprating5" name="exprating" value="5">
+                        <label for="exprating5">5</label>
+                    </div>
+                    <div class="question">Rate Your Quiz Accuracy:</div>
+                    <div class="rating">
+                        <input type="radio" id="quizrating1" name="quizrating" value="1">
+                        <label for="quizrating1">1</label>
+                        <input type="radio" id="quizrating2" name="quizrating" value="2">
+                        <label for="quizrating2">2</label>
+                        <input type="radio" id="quizrating3" name="quizrating" value="3">
+                        <label for="quizrating3">3</label>
+                        <input type="radio" id="quizrating4" name="quizrating" value="4">
+                        <label for="quizrating4">4</label>
+                        <input type="radio" id="quizrating5" name="quizrating" value="5">
+                        <label for="quizrating5">5</label>
+                    </div>
+                    <div class="question">Rate Your Selected Products:</div>
+                    <div class="rating">
+                        <input type="radio" id="prodrating1" name="prodrating" value="1">
+                        <label for="prodrating1">1</label>
+                        <input type="radio" id="prodrating2" name="prodrating" value="2">
+                        <label for="prodrating2">2</label>
+                        <input type="radio" id="prodrating3" name="prodrating" value="3">
+                        <label for="prodrating3">3</label>
+                        <input type="radio" id="prodrating4" name="prodrating" value="4">
+                        <label for="prodrating4">4</label>
+                        <input type="radio" id="prodrating5" name="prodrating" value="5">
+                        <label for="prodrating5">5</label>
+                    </div>
+                    <textarea name="message" placeholder="Message" rows="5" required></textarea><br>
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+        </div>
+        <footer>
+            <div class="footercontent" >
+                <img src="images/logo.png" alt="Logo" class="logofoot"> 
+                <p>&copy;2024 peau.  All rights reserved.</p>
+            </div>
+        </footer>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+             const hamburger = document.querySelector('.hamburger');
+             const navLinks = document.querySelector('.navlinks');
+    
+             hamburger.addEventListener('click', function () {
+                 navLinks.classList.toggle('show');
+             });
+             })
+          </script>
+    </body>
+
+</html>
