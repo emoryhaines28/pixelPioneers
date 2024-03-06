@@ -1,56 +1,79 @@
-<!doctype html> 
+<!DOCTYPE html>
 <html>
-    <head> 
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width", initial-scale="1">    
-        <title> oily skin </title>
-        <link rel="stylesheet" href="mystyles.css">
-        <style type="text/css">
-            body {
-                background-color: #F5CC97; 
-            }
-            .info {
-                margin-top: 80px; 
-                margin-bottom: 80px; 
-                padding: 20px;
-                color: #F55D33; 
-            }
-            .small {
-                color: #c83f19;
-            }
-            .product-container {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: flex-start;
-                gap: 15px;
-            }
-            .product-box {
-                width: 150px;
-                height: 150px;
-                background-color: #f1e9c3;
-            }
-        </style>
-    </head>
-    <body>
-        <nav>
-            <div class="bar">
-                <a href="home.html">
-                    <img src="images/logo.png" alt="Logo" class="logo"> 
-                </a>
-                <div class="navlinks">
-                    <a href="form.html" class="navlink">your skin type</a>
-                    <a href="skincolumns.html" class="navlink">skin types</a>
-                    <a href="about.html" class="navlink">about us</a>
-                    <a href="contact.html" class="navlink">contact us</a>
-                </div>
-                <a href="#" class="hamburger">&#9776;</a>      
-            </div>
-        </nav>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">    
+    <title>oily skin</title>
+    <link rel="stylesheet" href="mystyles.css">
+    <style type="text/css">
+        body {
+            background-color: #F5CC97; 
+        }
+        .info {
+            margin-top: 80px; 
+            margin-bottom: 80px; 
+            padding: 20px;
+            color: #F55D33; 
+        }
+        .small {
+            color: #c83f19;
+        }
 
-        <div class="info">
-            <h1>oily skin</h1>
-            <div class="small">
-                Oily skin, often characterized by its excessive sebum production, can leave you 
+        .container {
+            overflow-x: auto;
+            white-space: nowrap;
+            padding-bottom: 10px; 
+        }
+
+        .box {
+            display: inline-block;
+            margin-right: 20px;
+            width: 200px; 
+            text-align: center;
+        }
+
+        .box-content {
+            width: 100%;
+            height: 200px;
+            border: 2px solid #F55D33;
+            background-color: antiquewhite;
+            overflow: hidden;
+        }
+
+        .box-content img {
+            width: 100%; 
+            height: 100%; 
+            object-fit: cover;
+        }
+    
+        .text  {
+            margin-top: 10px;
+            max-width: 200px !important;
+            text-align: center;
+            color: #F55D33;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="bar">
+            <a href="home.html">
+                <img src="images/logo.png" alt="Logo" class="logo"> 
+            </a>
+            <div class="navlinks">
+                <a href="form.html" class="navlink">your skin type</a>
+                <a href="skincolumns.html" class="navlink">skin types</a>
+                <a href="about.html" class="navlink">about us</a>
+                <a href="contact.html" class="navlink">contact us</a>
+            </div>
+            <a href="#" class="hamburger">&#9776;</a>      
+        </div>
+    </nav>
+
+    <div class="info">
+        <h1>oily skin</h1>
+        <div class="small">
+            Oily skin, often characterized by its excessive sebum production, can leave you 
             feeling like you're in a constant battle against shine and breakouts. But fret 
             not, for understanding your skin type is the first step towards achieving that 
             coveted balance. Oily skin tends to be prone to enlarged pores, acne, and a 
@@ -69,45 +92,123 @@
             blemish-free.
 
             </br></br>These are our favorite products for oily skin and we hope you love them too!
+        </div>
+
+        <h2>cleansers</h2>
+
+        <div class="container">
+            <div class="box" id="0">
+                <div class="box-content"><img src=""></div>
+                <div class="text"></div>
             </div>
-            <h2>cleansers</h2>
-            <div class="product-container">
-                <div class="product-box"></div>
-                <div class="product-box"></div>
-                <div class="product-box"></div>
-                <div class="product-box"></div>
-                <div class="product-box"></div>
+            <div class="box" id="1">
+                <div class="box-content"><img src=""></div>
+                <div class="text"></div>
             </div>
-            <h2>moisturizers</h2>
-            <div class="product-container">
-                <div class="product-box"></div>
-                <div class="product-box"></div>
-                <div class="product-box"></div>
+            <div class="box" id="2">
+                <div class="box-content"><img src=""></div>
+                <div class="text"></div>
             </div>
-            <h2>sunscreens</h2>
-            <div class="product-container">
-                <div class="product-box"></div>
-                <div class="product-box"></div>
-                <div class="product-box"></div>
-                <div class="product-box"></div>
+            <div class="box" id="3">
+                <div class="box-content"><img src=""></div>
+                <div class="text"></div>
+            </div>
+            <div class="box" id="4">
+                <div class="box-content"><img src=""></div>
+                <div class="text"></div>
+            </div>
+        </div>
+
+        <h2>moisturizers</h2>
+
+        <div class="container">
+            <div class="box" id="5">
+                <div class="box-content"><img src=""></div>
+                <div class="text"></div>
+            </div>
+            <div class="box" id="6">
+                <div class="box-content"><img src=""></div>
+                <div class="text"></div>
+            </div>
+            <div class="box" id="7">
+                <div class="box-content"><img src=""></div>
+                <div class="text"></div>
+            </div>
+            <div class="box" id="8">
+                <div class="box-content"><img src=""></div>
+                <div class="text"></div>
             </div>
         </div>
         
-        <footer>
-            <div class="footercontent" >
-                <img src="images/logo.png" alt="Logo" class="logofoot"> 
-                <p>&copy;2024 peau.  All rights reserved.</p>
+        <h2>sunscreens</h2>
+
+        <div class="container">
+            <div class="box" id="9">
+                <div class="box-content"><img src=""></div>
+                <div class="text"></div>
             </div>
-        </footer>
-        <script>
-            document.addEventListener('DOMContentLoaded', function () {
-             const hamburger = document.querySelector('.hamburger');
-             const navLinks = document.querySelector('.navlinks');
+            <div class="box" id="10">
+                <div class="box-content"><img src=""></div>
+                <div class="text"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        //add all urls in the order you want them to appear
+        const urls = [
+            "cerave-sa-cleanser.jpg",
+            "MV_treatment-cleanser.jpg",
+            "url3",
+            "url4",
+            "url5",
+            "url6",
+            "url7",
+            "url8",
+            "url9",
+            "url10",
+            "url11",
+        ];
+
+        //link each url to the name you want displayed
+        const products = {
+            "cerave-sa-cleanser.jpg": "CeraVe SA cleanser",
+            "MV_treatment-cleanser.jpg": "Marie Veronique exfoliating cleanser",
+            "url3":"add name",
+            "url4":"add name",
+            "url5":"add name",
+            "url6":"add name",
+            "url7":"add name",
+            "url8":"add name",
+            "url9":"add name",
+            "url10":"add name",
+            "url11":"add name",
+        };
+
+        urls.forEach((url, index) => {
+            const productTitle = document.getElementById(index).querySelector('.text');
+            productTitle.innerText = products[url];
+            const productImg = document.getElementById(index).querySelector('.box-content img');
+            productImg.src = "images/"+url;
+        });
+    </script>
     
-             hamburger.addEventListener('click', function () {
-                 navLinks.classList.toggle('show');
-             });
-             })
-          </script>
-    </body>
+    <footer>
+        <div class="footercontent" >
+            <img src="images/logo.png" alt="Logo" class="logofoot"> 
+            <p>&copy;2024 peau.  All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+         const hamburger = document.querySelector('.hamburger');
+         const navLinks = document.querySelector('.navlinks');
+
+         hamburger.addEventListener('click', function () {
+             navLinks.classList.toggle('show');
+         });
+         })
+      </script>
+</body>
 </html>
