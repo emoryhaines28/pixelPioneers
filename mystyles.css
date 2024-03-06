@@ -111,7 +111,8 @@ footer {
     }
 
     nav a:hover {
-        color: #F5CC97;
+        font-weight: bold;
+        color:#F55D33
         
     }
     .hamburger:hover {
