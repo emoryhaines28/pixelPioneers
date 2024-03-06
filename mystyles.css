@@ -1,7 +1,6 @@
-/* colors to work with:
-    cream color: #F8F4E3
+/* colors to work with: 
     color: #F5CC97;
-    color: #F5BD33;
+    color: F5BD33;
     color: #F55D33;
     color: #F57F33;
 
@@ -10,7 +9,7 @@ font:
     font-weight: normal; */
 
 nav {
-    background-color:  #F55D33;; 
+    background-color:  #F55D33; 
     position: fixed;
     width: 100%; 
     z-index: 1000;
@@ -88,7 +87,7 @@ footer {
 @media screen and (max-width: 899px) {
     .hamburger {
         display: block;
-        font-size: 40px
+        font-size: 40px;
     }
 
     .navlinks.show {
@@ -98,7 +97,7 @@ footer {
     }
 
     .navlinks {
-        background-color: #F55D33;
+        background-color: #F5BD33;
         position: absolute;
         top: calc(100% + 10px);
         right: 10px;
@@ -111,11 +110,22 @@ footer {
         display: none;
     }
 
+    nav a:hover {
+        color: #F5CC97;
+        
+    }
+    .hamburger:hover {
+       color: #F5BD33;
+    }
+
     .navlinks a {
         margin: 0; /* Remove default margin */
         padding: 10px 0; /* Add padding for spacing */
         margin-top: 0px;
         display: block;
+        color: #F55D33;
+
+        
     }
 }
 

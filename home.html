@@ -10,8 +10,126 @@
                 background-size: cover;
                 background-repeat: no-repeat;
                 background-position: center;  
+                min-height: 100vh;
             }
-        </style>  
+
+            .spacer1 {
+                height: 200px;
+                background-color: #F5CC97 ;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 0 20px; 
+                box-sizing: border-box; 
+                margin-top: 70px;
+            }
+
+            .text {
+                color: #F55D33;
+                font-size: 20px;
+                max-width: 800px;
+                opacity: 0;
+                margin: 0 auto;
+                transition: opacity 1s ease-in-out;
+                line-height: 1.6;
+                font-weight: bold;
+            }
+
+            .fade{
+                background-color: #F55D33;
+                color: #F5CC97;
+                font-size: 30px;
+                border-radius: 10px;
+                padding: 20px;
+                opacity: 0;
+                transition: opacity 1s ease-in-out;
+            }
+            .section1 {
+                height: 500px;
+                background-image: url('images/background1.png'); 
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;  
+                text-align: center;
+            }
+            .spacer2 {
+                height: 200px;
+                background-color: #F5CC97;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+            }
+
+            .section2 {
+                height: 500px;
+                background-image: url('images/background.jpg');
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;  
+                text-align: center;
+            }
+
+            .reviewsection {
+                background-color: #F5CC97;
+                padding: 50px;
+                text-align: center;
+            }
+
+            .reviews-container {
+                display: flex;
+                justify-content: center;
+                gap: 20px;
+            }
+
+            .fake-review {
+                flex: 0 0 30%;
+                background-color: #F55D33;
+                color: #F5CC97;
+                border-radius: 10px;
+                margin: 20px;
+                padding: 20px;
+                font-size: 18px;
+                box-sizing: border-box;
+                text-align: center;
+            }
+
+            .review {
+                background-color: #F55D33;
+                color: #F5CC97;
+                font-size: 30px;
+                border-radius: 10px;
+                padding: 10px 20px;
+                opacity: 0;
+                transition: opacity 1s ease-in-out;
+            }   
+
+            @media (max-width: 830px) {
+                .reviews-container {
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 0px;
+                }
+
+                .fake-review {
+                    flex: 0 0 70%;
+                    margin-top: 20px; 
+                    padding: 10px;
+                }
+
+                .review {
+                    padding: 5px 5px;
+                }
+                .text {
+                    font-size: 18px;
+                    margin: 10px;
+                    font-weight: normal;
+                    line-height: normal;
+                }
+            }
+
+
+</style>  
     </head>
     <body>
         <nav>
@@ -28,6 +146,39 @@
                 <a href="#" class="hamburger">&#9776;</a>      
             </div>
         </nav>
+
+        <div class="spacer1">
+            <div class="fade">
+                skincare that's personal
+            </div>      
+        </div>
+
+        <section class="section1"> </section>
+        
+        <div class="spacer2">
+            <div class="text" >
+                At Peau, we understand that everyone's skin is unique, and finding the right skincare routine can be challenging. That's why we've made it our mission to simplify the process for you. Our innovative platform utilizes advanced algorithms to analyze your skin type accurately.
+            </div>
+        </div>
+
+        <section class="section2"> </section>
+    
+        <section class="reviewsection">
+            <div class="review">Reviews</div>
+            <div class="reviews-container">
+                <div class="fake-review">
+                   <p>"Peau simplified my skincare routine. Their recommendations worked wonders for my skin, and their customer service was exceptional!"</p>
+                </div>
+                <div class="fake-review">
+                    <p>"Thanks to Peau, my skin has never looked better. Their platform made finding the right products effortless, and their support team was fantastic!"</p>
+                </div>
+                <div class="fake-review">
+                    <p>"Peau's personalized recommendations transformed my skincare routine. Effective products, excellent service - highly recommend!"</p>
+                </div>
+            </div>
+        </section>
+
+
         <footer>
             <div class="footercontent" >
                 <img src="images/logo.png" alt="Logo" class="logofoot"> 
@@ -35,6 +186,17 @@
             </div>
         </footer>
 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            setTimeout(function() {
+                $('.fade').fadeTo(300, 1);
+                $('.text').fadeTo(300, 1);
+                $('.review').fadeTo(300, 1);
+            }, 300);
+         
+        });
+    </script>
         <script>
            document.addEventListener('DOMContentLoaded', function () {
             const hamburger = document.querySelector('.hamburger');
@@ -45,5 +207,6 @@
             });
             })
          </script>
+
     </body>
 </html>
