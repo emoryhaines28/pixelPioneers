@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">    
+    <title>oily skin</title>
+    <link rel="stylesheet" href="mystyles.css">
+    <style type="text/css">
+        body {
+            background-color: #F5CC97; 
+        }
+        .info {
+            margin-top: 80px; 
+            margin-bottom: 80px; 
+            padding: 20px;
+            color: #F55D33; 
+        }
+        .small {
+            color: #c83f19;
+        }
+
+        .container {
+            overflow-x: auto;
+            white-space: nowrap;
+            padding-bottom: 10px; 
+        }
+
+        .box {
+            display: inline-block;
+            margin-right: 20px;
+            width: 200px; 
+            text-align: center;
+        }
+
+        .box-content {
+            width: 100%;
+            height: 200px;
+            border: 2px solid #F55D33;
+            background-color: antiquewhite;
+            overflow: hidden;
+        }
+
+        .box-content img {
+            width: 100%; 
+            height: 100%; 
+            object-fit: cover;
+        }
+    
+        .text  {
+            margin-top: 10px;
+            max-width: 200px !important;
+            text-align: center;
+            color: #F55D33;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="bar">
+            <a href="home.html">
+                <img src="images/logo.png" alt="Logo" class="logo"> 
+            </a>
+            <div class="navlinks">
+                <a href="form.html" class="navlink">your skin type</a>
+                <a href="skincolumns.html" class="navlink">skin types</a>
+                <a href="about.html" class="navlink">about us</a>
+                <a href="contact.html" class="navlink">contact us</a>
+            </div>
+            <a href="#" class="hamburger">&#9776;</a>      
+        </div>
+    </nav>
+
+    <div class="info">
+        <h1>dry skin</h1>
+        <div class="small">
+          Experience the relief of hydrated, nourished skin with our curated
+          selection of products designed specifically for dry skin concerns.
+          Dry skin, characterized by a lack of moisture in the epidermis, can
+          result from various factors including environmental conditions, harsh
+          cleansers, and underlying medical conditions. Our suggested gentle 
+          cleansers, enriched with hydrating ingredients, effectively cleanse 
+          without stripping the skin's natural oils. Follow up with our suggested luxurious
+          moisturizers, formulated with potent hydrators like hyaluronic acid and
+          shea butter, to lock in moisture and strengthen the skin's barrier.
+          For intensive hydration, indulge in our suggested ointments and creams, providing
+          a rich, protective layer to combat dryness and soothe irritation. 
+          Discover the transformative power of humectants in our suggested serums,
+          attracting moisture to parched skin for a soft, supple complexion.
+          Protect your skin from further damage with these broad-spectrum sunscreens,
+          while avoiding harsh ingredients that can exacerbate dryness. 
+          Incorporate a humidifier into your home environment to maintain optimal
+          moisture levels. Consistency is key, and with our carefully curated selection
+          of products, you can restore your skin's natural hydration and vitality, 
+          revealing a radiant, replenished complexion.
+
+            </br></br>These are our favorite products for dry skin and we hope you love them too!
+        </div>
+
+        <h2>cleansers</h2>
+
+        <div class="container">
+            <div class="box" id="0">
+                <div class="box-content"><img src=""></div>
+                <div class="text"></div>
+            </div>
+            <div class="box" id="1">
+                <div class="box-content"><img src=""></div>
+                <div class="text"></div>
+            </div>
+            <div class="box" id="2">
+                <div class="box-content"><img src=""></div>
+                <div class="text"></div>
+            </div>
+            <div class="box" id="3">
+                <div class="box-content"><img src=""></div>
+                <div class="text"></div>
+            </div>
+            <div class="box" id="4">
+                <div class="box-content"><img src=""></div>
+                <div class="text"></div>
+            </div>
+        </div>
+
+        <h2>moisturizers and serums</h2>
+
+        <div class="container">
+            <div class="box" id="5">
+                <div class="box-content"><img src=""></div>
+                <div class="text"></div>
+            </div>
+            <div class="box" id="6">
+                <div class="box-content"><img src=""></div>
+                <div class="text"></div>
+            </div>
+            <div class="box" id="7">
+                <div class="box-content"><img src=""></div>
+                <div class="text"></div>
+            </div>
+            <div class="box" id="8">
+                <div class="box-content"><img src=""></div>
+                <div class="text"></div>
+            </div>
+        </div>
+        
+        <h2>sunscreens</h2>
+
+        <div class="container">
+            <div class="box" id="9">
+                <div class="box-content"><img src=""></div>
+                <div class="text"></div>
+            </div>
+            <div class="box" id="10">
+                <div class="box-content"><img src=""></div>
+                <div class="text"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        //add all urls in the order you want them to appear
+        const urls = [
+            "milkycleanser.jpg",
+            "squalene.jpg",
+            "cetaphil.jpeg",
+            "roche.jpg",
+            "clinique.jpeg",
+            "hylauronic.jpeg",
+            "snailmucin.jpeg",
+            "aveeno.jpeg",
+            "eucerin.jpeg",
+            "sunscreen.jpg",
+            "hydroboost.jpeg",
+        ];
+
+        //link each url to the name you want displayed
+        const products = {
+            "milkycleanser.jpg": "Glossier Milky Jelly",
+            "squalene.jpg": "Ordinary Squalene",
+            "cetaphil.jpeg":"Cetaphil Gentle Skin",
+            "roche.jpg":"La Roche-Posay Toleriane",
+            "clinique.jpeg":"Take the Day Off Balm",
+            "hylauronic.jpeg":"Ordinary Hylauronic Acid",
+            "snailmucin.jpeg":"Snail Mucin",
+            "aveeno.jpeg":"Aveeno Daily Moisturing",
+            "eucerin.jpeg":"Eucerin Advanced Repair",
+            "sunscreen.jpg":"Unseen Sunscreen",
+            "hydroboost.jpeg":"HydroBoost",
+        };
+
+        urls.forEach((url, index) => {
+            const productTitle = document.getElementById(index).querySelector('.text');
+            productTitle.innerText = products[url];
+            const productImg = document.getElementById(index).querySelector('.box-content img');
+            productImg.src = "images/"+url;
+        });
+    </script>
+    
+    <footer>
+        <div class="footercontent" >
+            <img src="images/logo.png" alt="Logo" class="logofoot"> 
+            <p>&copy;2024 peau.  All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+         const hamburger = document.querySelector('.hamburger');
+         const navLinks = document.querySelector('.navlinks');
+
+         hamburger.addEventListener('click', function () {
+             navLinks.classList.toggle('show');
+         });
+         })
+      </script>
+</body>
+</html>
