@@ -51,8 +51,9 @@
             color: #F55D33;
             font-size: 40px;
             background-color: #F8F4E3;
-            border-radius: 10px;
-            border: 4px solid #F55D33;
+            /* border-radius: 10px; */
+            margin-bottom: 10px;
+            /* border: 4px solid #F55D33; */
             padding: 10px;
             width: 80%; 
             max-width: 600px;
@@ -66,8 +67,8 @@
         .contact-form {
             margin: 0 auto;
             margin-top: 20px;
-            width: 80%;
-            max-width: 600px;
+            width: 90%;
+            max-width: 800px;
             background-color: #F8F4E3;
             padding: 20px;
             border-radius: 10px;
@@ -88,7 +89,7 @@
 
         .contact-form input[type="submit"] {
             background-color: #F55D33; 
-            color: #FFF;
+            color: #F8F4E3;
             border: none;
             padding: 10px 20px;
             text-align: center;
@@ -117,6 +118,7 @@
 
         .rating label {
             margin: 0 5px;
+            font-weight: lighter;
         }
 
         .rating input[type="radio"] {
@@ -139,7 +141,6 @@
             margin: 0 5px;
             font-size: 20px;
             color: #F55D33;
-            font-weight: bold;
             margin-right: 10px;
         }
 
@@ -173,11 +174,11 @@
             </div>
         </nav>
         <div class="contact-section">
-            <h1>Contact Us</h1>
             <div class="contact-form">
+                <h1>Contact Us</h1>
                 <form action="#" method="post">
-                    <input type="text" name="name" placeholder="Name" required><br>
-                    <input type="email" name="email" placeholder="Email" required><br>
+                    <!-- <input type="text" name="name" placeholder="Name" required><br>
+                    <input type="email" name="email" placeholder="Email" required><br> -->
                     <div class="question">Rate Your Experience:</div>
                     <div class="rating">
                         <input type="radio" id="exprating1" name="exprating" value="1">
@@ -217,6 +218,7 @@
                         <input type="radio" id="prodrating5" name="prodrating" value="5">
                         <label for="prodrating5">5</label>
                     </div>
+                    <div class="question">Leave us a note: </div> </br>
                     <textarea name="message" placeholder="Message" rows="5" required></textarea><br>
                     <input type="submit" value="Submit">
                 </form>
