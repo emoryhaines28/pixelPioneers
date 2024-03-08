@@ -29,7 +29,6 @@
   input[type="text"], select {
     border: 1px #FFF;
     border-radius: 5px;
-
   }
 
   h2 {
@@ -44,6 +43,7 @@
   }
 
   select {
+    margin-top: 10px;
     color: #F55D33; /* Change the color to your desired text color */
   }
 
@@ -148,7 +148,7 @@
     <input type="radio" id=consent_no name='email_consent' value=no> No
     <br /><br />
       <div class="checkbox-group">
-        <label> Which options best describes your experience with foundation or makeup?</label>
+        <label> Which options best describe your experience with foundation or makeup?</label>
         <input type="checkbox" id="slide" name="slide" value="Makeupslide">Makeup tends to slide off easily
         <br>
         <input type="checkbox" id="good" name="good" value="well">Makeup adheres well, no sliding or flaking
@@ -168,7 +168,7 @@
       <option value="balanced">Feels comfortable and balanced</option>
       <option value="oily">Becomes oily shortly after washing</option></select>
     <br /><br />	
-      How often do you experience breakouts or acne?
+      How often do you experience breakouts or acne? <br />	
       <select id="breakouts" name="breakouts">
       <option value="frequent">Frequently</option>
       <option value="occasional">Occasionally</option>
@@ -181,7 +181,6 @@
       <option value="refreshed">Some areas feel refreshed, 
         others may feel tight or oily</option></select>
     <br /><br />	
-    
     <input type = "submit" value = "Go!">
 	</form>
   </div>
