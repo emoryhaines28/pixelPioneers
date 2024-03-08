@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">    
+    <title>oily skin</title>
+    <link rel="stylesheet" href="mystyles.css">
+    <style type="text/css">
+        body {
+            background-color: #F5CC97; 
+        }
+        .info {
+            margin-top: 80px; 
+            margin-bottom: 80px; 
+            padding: 20px;
+            color: #F55D33; 
+        }
+        .small {
+            color: #c83f19;
+        }
+
+        .container {
+            overflow-x: auto;
+            white-space: nowrap;
+            padding-bottom: 10px; 
+        }
+
+        .box {
+            display: inline-block;
+            margin-right: 20px;
+            width: 200px; 
+            text-align: center;
+        }
+
+        .box-content {
+            width: 100%;
+            height: 200px;
+            border: 2px solid #F55D33;
+            background-color: antiquewhite;
+            overflow: hidden;
+        }
+
+        .box-content img {
+            width: 100%; 
+            height: 100%; 
+            object-fit: cover;
+        }
+    
+        .text  {
+            margin-top: 10px;
+            max-width: 200px !important;
+            text-align: center;
+            color: #F55D33;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="bar">
+            <a href="home.html">
+                <img src="images/logo.png" alt="Logo" class="logo"> 
+            </a>
+            <div class="navlinks">
+                <a href="form.html" class="navlink">your skin type</a>
+                <a href="skincolumns.html" class="navlink">skin types</a>
+                <a href="about.html" class="navlink">about us</a>
+                <a href="contact.html" class="navlink">contact us</a>
+            </div>
+            <a href="#" class="hamburger">&#9776;</a>      
+        </div>
+    </nav>
+
+    <div class="info">
+        <h1>combination skin</h1>
+        <div class="small">
+          Discover a curated selection of skincare essentials specially formulated for 
+          combination skin. Whether you're dealing with an oily T-zone or dry patches, 
+          we've sifted through the clutter to bring you a range of products designed
+          to address the unique needs of your skin type. From gentle cleansers to
+          lightweight moisturizers and targeted treatments, our recommendations are 
+          here to help you achieve balance and harmony in your skincare routine. 
+          Say hello to a complexion that feels nourished, hydrated, and perfectly in sync.
+
+          </br></br>These are our favorite products for combination skin and we hope you love them too!
+        </div>
+
+        <h2>cleansers</h2>
+
+        <div class="container">
+            <div class="box" id="0">
+                <div class="box-content"><img src=""></div>
+                <div class="text"></div>
+            </div>
+            <div class="box" id="1">
+                <div class="box-content"><img src=""></div>
+                <div class="text"></div>
+            </div>
+            <div class="box" id="2">
+                <div class="box-content"><img src=""></div>
+                <div class="text"></div>
+            </div>
+            <div class="box" id="3">
+                <div class="box-content"><img src=""></div>
+                <div class="text"></div>
+            </div>
+            <div class="box" id="4">
+                <div class="box-content"><img src=""></div>
+                <div class="text"></div>
+            </div>
+        </div>
+
+        <h2>moisturizers and serums</h2>
+
+        <div class="container">
+            <div class="box" id="5">
+                <div class="box-content"><img src=""></div>
+                <div class="text"></div>
+            </div>
+            <div class="box" id="6">
+                <div class="box-content"><img src=""></div>
+                <div class="text"></div>
+            </div>
+            <div class="box" id="7">
+                <div class="box-content"><img src=""></div>
+                <div class="text"></div>
+            </div>
+            <div class="box" id="8">
+                <div class="box-content"><img src=""></div>
+                <div class="text"></div>
+            </div>
+        </div>
+        
+        <h2>sunscreens</h2>
+
+        <div class="container">
+            <div class="box" id="9">
+                <div class="box-content"><img src=""></div>
+                <div class="text"></div>
+            </div>
+            <div class="box" id="10">
+                <div class="box-content"><img src=""></div>
+                <div class="text"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        //add all urls in the order you want them to appear
+        const urls = [
+            "laurelskin.jpeg",
+            "glytone.jpeg",
+            "oilfree.jpeg",
+            "roche.jpg",
+            "superfood.jpeg",
+            "skinfixFinal.jpeg",
+            "cerave.jpeg",
+            "versed.jpeg",
+            "paulas.jpeg",
+            "clearface.jpeg",
+            "combinationsun.jpg",
+        ];
+
+        //link each url to the name you want displayed
+        const products = {
+            "laurelskin.jpeg": " Laurel Oil",
+            "glytone.jpeg": "Glytone Gel",
+            "oilfree.jpeg":"Oil-Free Acne",
+            "roche.jpg":"La Roche-Posay Toleriane",
+            "superfood.jpeg":"SuperFood Air Whip",
+            "skinFixFinal.jpeg":"SkinFix Serum",
+            "cerave.jpeg":"Cerave Daily",
+            "versed.jpeg":"Versed Sunday Morning",
+            "paulas.jpeg":"Paula's Mask",
+            "clearface.jpeg":"Clear Face",
+            "combinationsun.jpg":"Melt In Milk",
+        };
+
+        urls.forEach((url, index) => {
+            const productTitle = document.getElementById(index).querySelector('.text');
+            productTitle.innerText = products[url];
+            const productImg = document.getElementById(index).querySelector('.box-content img');
+            productImg.src = "images/"+url;
+        });
+    </script>
+    
+    <footer>
+        <div class="footercontent" >
+            <img src="images/logo.png" alt="Logo" class="logofoot"> 
+            <p>&copy;2024 peau.  All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+         const hamburger = document.querySelector('.hamburger');
+         const navLinks = document.querySelector('.navlinks');
+
+         hamburger.addEventListener('click', function () {
+             navLinks.classList.toggle('show');
+         });
+         })
+      </script>
+</body>
+</html>
