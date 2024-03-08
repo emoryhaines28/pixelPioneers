@@ -16,6 +16,7 @@ Home Page - Maddy
 -background image
 -site “logo” to return to home page
 - jquuery special effect
+-Needs an H1******************
 
 About Us - Emilia
 - ol and ul, list
