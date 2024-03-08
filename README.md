@@ -30,6 +30,7 @@ Contact - Emilia
 All three skintypes page - Emory 
 -at least one page must have multiple columns - complete
 -need to fix bakcground colors
+-Needs an H1******************
 
 Three different skintype pages - Belle/Emory
 -associative array
