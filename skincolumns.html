@@ -45,6 +45,18 @@
     .hidden {
     display: none;
     }
+
+   
+
+    @media (max-width: 720px) {
+    body {
+      flex-direction: column; /* Stack the flex items (columns) vertically */
+    }
+
+    .column:first-of-type {
+    margin-top: 50px; /* Adjust this value as needed for desired spacing */
+  }
+  }
   </style>
 </head>
 <body>
@@ -82,7 +94,7 @@
     <button onclick="window.location.href='combination.html'"><h3> Combination Skin </h3></button>
   </div>
 
-  <div class="column" style=" background-color: #F57F33;">
+  <div class="column" style=" background-color: #fab875;">
     <button onclick="window.location.href='oily.html'"><h3> Oily Skin </h3></button>
   </div>
 
