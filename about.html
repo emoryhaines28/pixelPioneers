@@ -64,18 +64,25 @@
             
         }
 
-        @media only screen and (max-width: 650px) {
-            .team-section {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .team-member {
-                width: 90%; 
-                max-width: 90%; 
-                margin-bottom: 20px;
-            }
+    @media screen and (max-width: 600px) {
+        .team-section {
+            padding: 0;
+            text-align: center;
+            flex-direction: column;
+            align-items: center; 
         }
+        .team-member {
+            max-width: 200px; 
+        } 
+
+        .team-member img {
+            width: 100%; /* Make images fill their containers */
+            max-width: 200px; /* Set a maximum width for images */
+            max-height: 200px;
+            border-radius: 50%;
+            margin: 0 auto; /* Center the image horizontally */
+        }
+    }
 
         .about-section p {
             font-size: 18px;
@@ -104,6 +111,9 @@
             height: 250px;
             border-radius: 50%;
             border: 6px solid #F55D33;
+            margin: auto;
+            display: flex;
+            justify-content: center;
         }
 
         .team-member h3 {

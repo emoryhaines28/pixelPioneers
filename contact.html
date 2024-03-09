@@ -55,6 +55,7 @@
         }
 
         .contact-section h1 {
+            margin-top: 5px;
             margin: 0;
             color: #F55D33;
             font-size: 40px;
@@ -62,9 +63,9 @@
         }
 
         .contact-form {
+            width: 80%;
             background-color: #F8F4E3; 
             margin: auto;
-            width: 80%; 
             max-width: 500px;
             padding: 20px;
             border-radius: 10px;
@@ -76,6 +77,15 @@
             overflow-y: auto; 
         }
 
+
+        @media screen and (max-width: 600px) {
+            .contact-section {
+                top: 53%; /* Center vertically */
+                transform: translate(-50%, -50%); /* Center horizontally and vertically */
+                width: 90%; /* Adjust the width to fit the screen */
+                max-width: 90%; /* Adjust the maximum width */
+            }
+        }
 
         .contact-form input[type="text"],
         .contact-form textarea {
@@ -149,6 +159,7 @@
         @media screen and (max-width: 600px) {
             .select {
                 width: 90%; 
+                height: 90%;
             }
 
             .title h2 {
@@ -178,9 +189,7 @@
         <div class="contact-section">
             <div class="contact-form">
                 <h1>Contact Us</h1>
-                <form action="#" method="post">
-                    <!-- <input type="text" name="name" placeholder="Name" required><br>
-                    <input type="email" name="email" placeholder="Email" required><br> -->
+                <form method="get" action='#'>
                     <div class="question">Rate Your Experience:</div>
                     <div class="rating">
                         <input type="radio" id="exprating1" name="exprating" value="1">
