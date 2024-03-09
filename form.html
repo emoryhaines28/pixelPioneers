@@ -1,6 +1,8 @@
 <!doctype html>
 <html>
 <head>
+<meta charset="UTF-8">
+ meta name="viewport" content="width=device-width", initial-scale="1">
 <title> Skin Type Form </title>
 
 <link rel="stylesheet" href="mystyles.css">
@@ -14,7 +16,7 @@
       background-color: #F8F4E3;
       padding: 20px;
       max-width: 575px; /* Set a maximum width for the form container */
-      width: 90%; /* Make sure it takes 100% of the available width up to the maximum width */
+      width: 80%; /* Make sure it takes 100% of the available width up to the maximum width */
       border-radius: 10px; /* Rounded corners */
       border: 5px solid #F55D33;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Box shadow for a subtle effect */
@@ -105,6 +107,13 @@
   input[type="submit"]:hover {
             background-color: #FF6347;
   }
+
+  @media only screen and (max-width: 768px) {
+    #form-container {
+      margin-bottom: 40px; /* Adjust the padding as needed */
+    }
+ }
+
 
 </style>
 
