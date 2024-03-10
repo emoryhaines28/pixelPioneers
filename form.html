@@ -223,6 +223,14 @@
     function processFormData() {
         var name = document.getElementById('the_name').value;
         var email = document.getElementById('the_email').value;
+        var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        
+        if (!emailRegex.test(email)) {
+            alert("Please enter a valid email address.");
+            return; // Prevent further processing if email is invalid
+        }
+        var yes = document.getElementById('consent_yes').value;
+        var no = document.getElementById('consent_no').value;
 
         // Checkbox values
         var slide = document.getElementById('slide').checked;
