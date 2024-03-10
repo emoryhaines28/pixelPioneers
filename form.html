@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
- meta name="viewport" content="width=device-width", initial-scale="1">
+<meta name="viewport" content="width=device-width", initial-scale="1">
 <title> Skin Type Form </title>
 
 <link rel="stylesheet" href="mystyles.css">
@@ -65,6 +65,19 @@
       margin-bottom: 5px;
   }
 
+  .radio-group {
+    display: flex;
+    align-items: center;
+  }
+
+  .radio-group div {
+    margin-right: 20px; /* Adjust spacing between radio buttons */
+  }
+
+  .radio-group input[type="radio"] {
+    margin-right: 5px; /* Adjust spacing between radio button and label */
+  }
+
   .popup {
     position: fixed;
     top: 50%;
@@ -115,6 +128,7 @@
  }
 
 
+
 </style>
 
 </head>
@@ -152,10 +166,20 @@
     <br /><br />
     <label>Email:</label> <input type="text" name='email' id='the_email'>
     <br /><br />
-    <label>Do you consent to email notifications?</label> 
+    <!-- <label>Do you consent to email notifications?</label> 
     <input type="radio" id=consent_yes name='email_consent' value=yes> Yes
-    <input type="radio" id=consent_no name='email_consent' value=no> No
-    <br /><br />
+    <input type="radio" id=consent_no name='email_consent' value=no> No -->
+    <label>Do you consent to email notifications?</label> 
+    <div class="radio-group">
+      <div>
+        <input type="radio" id="consent_yes" name="email_consent" value="yes"> 
+        <label for="consent_yes">Yes</label>
+      </div>
+      <div>
+        <input type="radio" id="consent_no" name="email_consent" value="no"> 
+        <label for="consent_no">No</label>
+      </div>
+    </div>
       <div class="checkbox-group">
         <label> Which options best describe your experience with foundation or makeup?</label>
         <input type="checkbox" id="slide" name="slide" value="Makeupslide">Makeup tends to slide off easily
