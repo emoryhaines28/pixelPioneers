@@ -160,16 +160,16 @@
 
   <!-- Skin Form -->
   <div id="form-container">
-  <h1>What is your skin type?</h1>
+  <h1>what is your skin type?</h1>
 	<form action='#' method='get' onsubmit="event.preventDefault(); processFormData()">
-    <label>Name:</label> <input type="text" name='name' id='the_name'>
+    <label>name:</label> <input type="text" name='name' id='the_name'>
     <br /><br />
-    <label>Email:</label> <input type="text" name='email' id='the_email'>
+    <label>email:</label> <input type="text" name='email' id='the_email'>
     <br /><br />
     <!-- <label>Do you consent to email notifications?</label> 
     <input type="radio" id=consent_yes name='email_consent' value=yes> Yes
     <input type="radio" id=consent_no name='email_consent' value=no> No -->
-    <label>Do you consent to email notifications?</label> 
+    <label>do you consent to email notifications?</label> 
     <div class="radio-group">
       <div>
         <input type="radio" id="consent_yes" name="email_consent" value="yes"> 
@@ -181,7 +181,7 @@
       </div>
     </div>
       <div class="checkbox-group">
-        <label> Which options best describe your experience with foundation or makeup?</label>
+        <label> which options best describe your experience with foundation or makeup?</label>
         <input type="checkbox" id="slide" name="slide" value="Makeupslide">Makeup tends to slide off easily
         <br>
         <input type="checkbox" id="good" name="good" value="well">Makeup adheres well, no sliding or flaking
@@ -189,32 +189,32 @@
         <input type="checkbox" id="cake" name="cake" value="cakey">Makeup tends to cake in some areas while disappearing in others
       </div>
     <br />
-      Which statement best describes the size of your pores?
+      which statement best describes the size of your pores?
       <select id="poreSize" name="poreSize">
       <option value="enlarged">Enlarged</option>
       <option value="small">Small and barely visible</option>
       <option value="mix">A mix of enlarged and small</option></select>
     <br /><br />
-      How does your skin usually react to cleansers or soaps?
+      how does your skin usually react to cleansers or soaps?
       <select id="cleanser" name="cleanser">
       <option value="tight">Feels tight and dry</option>
       <option value="balanced">Feels comfortable and balanced</option>
       <option value="oily">Becomes oily shortly after washing</option></select>
     <br /><br />	
-      How often do you experience breakouts or acne? <br />	
+      how often do you experience breakouts or acne? <br />	
       <select id="breakouts" name="breakouts">
       <option value="frequent">Frequently</option>
       <option value="occasional">Occasionally</option>
       <option value="rarely">Rarely</option></select>
     <br /><br />	
-      How does your skin feel after using a toner?
+      how does your skin feel after using a toner?
       <select id="toner" name="toner">
       <option value="tight">Tight and dry</option>
       <option value="fresh">Fresh and balanced</option>
       <option value="refreshed">Some areas feel refreshed, 
         others may feel tight or oily</option></select>
     <br /><br />	
-    <input type = "submit" value = "Go!">
+    <input type = "submit" value = "go!">
 	</form>
   </div>
 
@@ -266,8 +266,8 @@
       var closeButton = document.createElement("button");
       var skinPageButton = document.createElement("button");
 
-      skinPageButton.textContent = "See Products for Me";
-      closeButton.textContent = "Close";
+      skinPageButton.textContent = "see products for me";
+      closeButton.textContent = "close";
 
       closeButton.onclick = function () {
           document.body.removeChild(popup);
