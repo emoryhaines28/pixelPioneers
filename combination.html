@@ -160,7 +160,7 @@
             "combinationsun.jpg",
         ];
 
-        //link each url to the name you want displayed
+        //link each url to the name you want displayed w associative array
         const products = {
             "laurelskin.jpeg": "Laurel Oil",
             "glytone.jpeg": "Glytone Gel",
@@ -175,7 +175,7 @@
             "combinationsun.jpg":"Melt In Milk",
         };
 
-         // associative array to display product name and picture
+        // display each image and the title associated with it
         urls.forEach((url, index) => {
             const productTitle = document.getElementById(index).querySelector('.text');
             productTitle.innerText = products[url];

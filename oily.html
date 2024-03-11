@@ -160,7 +160,7 @@
             "raw_elements.jpg",
         ];
 
-        //link each url to the name you want displayed
+        //link each url to the name you want displayed w associative array
         const products = {
             "cerave-sa-cleanser.jpg": "CeraVe SA Cleanser",
             "foam_cleanser.jpg": "Foaming Cleanser",
@@ -175,6 +175,7 @@
             "raw_elements.jpg":"Certified Natural SPF 30",
         };
 
+        // display each image and the title associated with it
         urls.forEach((url, index) => {
             const productTitle = document.getElementById(index).querySelector('.text');
             productTitle.innerText = products[url];
