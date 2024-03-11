@@ -12,16 +12,16 @@
   #form-container {
       margin: auto;
       margin-top: 100px;
-      color: #F55D33; /* Set the background color for the form container */
+      color: #F55D33; 
       background-color: #F8F4E3;
       padding: 20px;
-      max-width: 575px; /* Set a maximum width for the form container */
-      width: 80%; /* Make sure it takes 100% of the available width up to the maximum width */
-      border-radius: 10px; /* Rounded corners */
+      max-width: 575px; 
+      width: 80%; 
+      border-radius: 10px; 
       border: 5px solid #F55D33;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Box shadow for a subtle effect */
-      max-height: 70vh; /* Set a maximum height for the form container, 70% of the viewport height */
-      overflow-y: auto; /* Add vertical scrollbar if the content exceeds the height */
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+      max-height: 70vh; 
+      overflow-y: auto; 
   }
 
   #form-container h1 {
@@ -46,18 +46,18 @@
 
   select {
     margin-top: 10px;
-    color: #F55D33; /* Change the color to your desired text color */
+    color: #F55D33;
   }
 
   div.checkbox-group {
     margin-bottom: 5px;
-    margin-top: 10px; /* Add a smaller top margin for separation */
+    margin-top: 10px; 
   }
 
   div.checkbox-group input[type="checkbox"] {
       display: inline-block;
       margin-bottom: 5px;
-      margin-right: 5px; /* Add a right margin for separation */
+      margin-right: 5px; 
   }
 
   div.checkbox-group label {
@@ -71,11 +71,11 @@
   }
 
   .radio-group div {
-    margin-right: 20px; /* Adjust spacing between radio buttons */
+    margin-right: 20px; 
   }
 
   .radio-group input[type="radio"] {
-    margin-right: 5px; /* Adjust spacing between radio button and label */
+    margin-right: 5px; 
   }
 
   .popup {
@@ -123,7 +123,7 @@
 
   @media only screen and (max-width: 768px) {
     #form-container {
-      margin-bottom: 40px; /* Adjust the padding as needed */
+      margin-bottom: 40px; 
     }
  }
 
@@ -166,9 +166,6 @@
     <br /><br />
     <label>Email:</label> <input type="text" name='email' id='the_email'>
     <br /><br />
-    <!-- <label>Do you consent to email notifications?</label> 
-    <input type="radio" id=consent_yes name='email_consent' value=yes> Yes
-    <input type="radio" id=consent_no name='email_consent' value=no> No -->
     <label>Do you consent to email notifications?</label> 
     <div class="radio-group">
       <div>
@@ -220,30 +217,36 @@
 
   <script>
     
+    // Store form data 
     function processFormData() {
+        // store text values
         var name = document.getElementById('the_name').value;
         var email = document.getElementById('the_email').value;
         var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         
+        // Validate email address
         if (!emailRegex.test(email)) {
             alert("Please enter a valid email address.");
-            return; // Prevent further processing if email is invalid
+            return; //Email is valid
         }
+
+        // store question values
         var yes = document.getElementById('consent_yes').value;
         var no = document.getElementById('consent_no').value;
 
-        // Checkbox values
+       
         var slide = document.getElementById('slide').checked;
         var good = document.getElementById('good').checked;
         var cake = document.getElementById('cake').checked;
 
-        // Other form values
+      
         var poreSize = document.getElementById('poreSize').value;
         var cleanser = document.getElementById('cleanser').value;
         var breakouts = document.getElementById('breakouts').value;
         var toner = document.getElementById('toner').value;
 
-        
+        // Assign individuals skin types based on their 
+        // response to how they react to cleansers
         var skinType = "Unknown";
         if (cleanser == "oily") {
             skinType = "Oily";
@@ -257,7 +260,8 @@
 
     }
     
-
+    // This function displays the users information
+    // and the type of skin type they have
     function showResultPopup(name, email, skinType) {
       var popup = document.createElement("div");
       popup.className = "popup";
@@ -269,6 +273,7 @@
       skinPageButton.textContent = "see products for me";
       closeButton.textContent = "close";
 
+      // Reset the form to the default values
       closeButton.onclick = function () {
           document.body.removeChild(popup);
           document.getElementById('the_name').value = "";
@@ -284,6 +289,7 @@
           document.getElementById('toner').value = "tight";
       }
 
+      // Go to skin type page
       skinPageButton.onclick = function () {
         navigateToSkinPage(skinType);
       }
@@ -294,6 +300,7 @@
 
     }
 
+    // Send to the correct page based on skin type
     function navigateToSkinPage(skinType) {
       if (skinType == "Oily") {
           window.location.href = "oily.html";
@@ -304,6 +311,7 @@
       }
   }
 
+  // navigation link hamburger
   document.addEventListener('DOMContentLoaded', function () {
             const hamburger = document.querySelector('.hamburger');
             const navLinks = document.querySelector('.navlinks');
