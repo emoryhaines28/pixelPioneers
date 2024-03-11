@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">    
-    <title>oily skin</title>
+    <title>combination skin</title>
     <link rel="stylesheet" href="mystyles.css">
     <style type="text/css">
         body {
@@ -71,7 +71,7 @@
     </nav>
 
     <div class="info">
-        <h1>combination skin</h1>
+        <h1>Combination Skin</h1>
         <div class="small">
           Discover a curated selection of skincare essentials specially formulated for 
           combination skin. Whether you're dealing with an oily T-zone or dry patches, 
@@ -160,14 +160,14 @@
             "combinationsun.jpg",
         ];
 
-        //link each url to the name you want displayed
+        //link each url to the name you want displayed w associative array
         const products = {
-            "laurelskin.jpeg": " Laurel Oil",
+            "laurelskin.jpeg": "Laurel Oil",
             "glytone.jpeg": "Glytone Gel",
             "oilfree.jpeg":"Oil-Free Acne",
             "roche.jpg":"La Roche-Posay Toleriane",
             "superfood.jpeg":"SuperFood Air Whip",
-            "skinFixFinal.jpeg":"SkinFix Serum",
+            "skinfixFinal.jpeg":"SkinFix Serum",
             "cerave.jpeg":"Cerave Daily",
             "versed.jpeg":"Versed Sunday Morning",
             "paulas.jpeg":"Paula's Mask",
@@ -175,6 +175,7 @@
             "combinationsun.jpg":"Melt In Milk",
         };
 
+        // display each image and the title associated with it
         urls.forEach((url, index) => {
             const productTitle = document.getElementById(index).querySelector('.text');
             productTitle.innerText = products[url];

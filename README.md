@@ -1,51 +1,50 @@
 # pixelPioneers
 Web Midterm
 
-H1 on each page
-set on stylesheet requirements
+Emory Haines, Maddy Dumont, Emilia Nathan, and Isabelle Bain
 
-javascript hamburger - done
+Name of Company
+peau
 
-meta  keywords - done
+Requirements Breakdown
+8 pages total 
 
+H1 on each page - done
+
+javascript is used for the hamburger nav links 
+
+meta keywords on each page - done
+
+all images are the correct size
+
+mobile friendly
 
 includes at least 3 
 -function - done
 
-Home Page - Maddy
+home.html 
 -background image
 -site “logo” to return to home page
 - jquuery special effect
 -Needs an H1******************
 
-About Us - Emilia
+about.html
 - ol and ul, list
 
-Form for Skintype - Emory
--javascript = done
--form w/ three types = done
+form.html
+-form w/ three types of questions
+-validates the email provided
 
-Contact - Emilia
+contact.html
 
-All three skintypes page - Emory 
--at least one page must have multiple columns - complete
--need to fix bakcground colors
--Needs an H1******************
+skincolumns.html 
+-has multiple columns without using a table
 
-Three different skintype pages - Belle/Emory
+oily.html, dry.html, combination.html
 -associative array
-- javascript array
--oily = belle
--combination = belle
--dry = emory
+-javascript array
 
-External style sheet - Maddy
--Navigation
--Header
+External style sheet
+-Navigation Bar fixed on every page
+-Footer fixed on every page
 
-Aesthetic
--clean girl
--minimalist
-
-Name of Company
-peau
