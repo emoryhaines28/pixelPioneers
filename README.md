@@ -15,6 +15,10 @@ javascript is used for the hamburger nav links
 
 meta keywords on each page - done
 
+all images are the correct size
+
+mobile friendly
+
 includes at least 3 
 -function - done
 
@@ -28,7 +32,6 @@ about.html
 - ol and ul, list
 
 form.html
--javascript
 -form w/ three types of questions
 -validates the email provided
 
