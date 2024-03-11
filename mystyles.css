@@ -105,8 +105,8 @@ footer {
         width: 100%;
         max-width: 200px;
         text-align: center; 
-        display: flex; /* Ensure flex display */
-        flex-direction: column; /* Ensure links stack vertically */
+        display: flex; 
+        flex-direction: column; 
         align-items: center; 
         display: none;
     }
@@ -121,8 +121,8 @@ footer {
     }
 
     .navlinks a {
-        margin: 0; /* Remove default margin */
-        padding: 10px 0; /* Add padding for spacing */
+        margin: 0; 
+        padding: 10px 0; 
         margin-top: 0px;
         display: block;
         color: #F55D33;
