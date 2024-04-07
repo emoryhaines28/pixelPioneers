@@ -48,3 +48,13 @@ External style sheet
 -Navigation Bar fixed on every page
 -Footer fixed on every page
 
+
+Final Presentation Tasks
+Amazon Affiliate:
+
+User Database:
+
+Product Database:
+
+
+API Integration: Beauty or Skincare API??
