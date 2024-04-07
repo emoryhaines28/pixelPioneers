@@ -50,11 +50,12 @@ External style sheet
 
 
 Final Presentation Tasks
-Amazon Affiliate:
+Amazon Affiliate: Emory, link to dry.html,
+oily.html, combination.html
 
-User Database:
+User Database: Isabelle - form.html/contact.html
 
-Product Database:
+Product Database: Emilia - external and then link to dry.html,
+oily.html, combination.html
 
-
-API Integration: Beauty or Skincare API??
+API Integration: Maddy - form.html
