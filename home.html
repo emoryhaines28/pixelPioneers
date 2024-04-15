@@ -11,6 +11,7 @@
                 background-repeat: no-repeat;
                 background-position: center;  
                 min-height: 100vh;
+               
             }
 
             .spacer1 {
@@ -53,7 +54,7 @@
             }
             .section1 {
                 height: 500px;
-                background-image: url('images/background1.png'); 
+                background-image: url('images/background5.jpg'); 
                 background-size: cover;
                 background-repeat: no-repeat;
                 background-position: center;  
@@ -77,9 +78,31 @@
                 text-align: center;
             }
 
+            .quote-section {
+                background-color: #F5CC97; /* Light orange background */
+                padding: 50px;
+                margin-top: 0;
+                text-align: center;
+            }
+
+            .quote-display p {
+                color: #F55D33; /* Black text color */
+                font-size: 24px; /* Keeping the font size consistent */
+                font-weight: bold;
+                font-family: 'American Typewriter', serif;
+            }
+
+            #quoteAuthor {
+                margin-top: 20px;
+                font-style: italic;
+            }
+
+
             .reviewsection {
                 background-color: #F5CC97;
                 padding: 50px;
+                margin-bottom: 0;
+                padding-bottom: 0;
                 text-align: center;
             }
 
@@ -145,14 +168,20 @@
                 }
             }
 
-            .hidden {
-              display: none;
+            @media screen and (min-width: 900px) {
+                .spacer1 h1 {
+                display: block;
+                }
             }
 
+            @media screen and (max-width: 899px) {
+                .spacer1 h1 {
+                    display: none;
+                }
+            }
 </style>  
     </head>
     <body>
-      <h1 class="hidden"> peau home </h1>
         <nav>
             <div class="bar">
                 <a href="home.html">
@@ -179,7 +208,7 @@
         
         <div class="spacer2">
             <div class="text" >
-                At Peau, we understand that everyone's skin is unique, and finding the right skincare routine can be challenging. That's why we've made it our mission to simplify the process for you. Our innovative platform utilizes advanced algorithms to analyze your skin type accurately.
+                At Peau, we understand that everyone's skin is unique, and finding the right skincare routine can be challenging. That's why we've made it our mission to simplify the process for you. Our innovative platform asks the right questions to analyze your skin type accurately.
             </div>
         </div>
 
@@ -203,6 +232,14 @@
             </div>
         </section>
 
+
+        <section class="quote-section">
+            <div class="quote-display">
+                <p id="quoteText">Loading quote...</p>
+                <p id="quoteAuthor"></p>
+            </div>
+        </section>
+            
 
         <footer>
             <div class="footercontent" >
@@ -231,6 +268,23 @@
                 navLinks.classList.toggle('show');
             });
             })
+
+            fetch("https://quote-garden.onrender.com/api/v3/quotes?genre=beauty")
+            .then(response => response.json())
+            .then(data => {
+                const quoteText = document.getElementById('quoteText');
+                const quoteAuthor = document.getElementById('quoteAuthor');
+                let index = 0;
+
+                function updateQuote() {
+                    quoteText.textContent = '"' + data.data[index].quoteText + '"';
+                    quoteAuthor.textContent = '- ' + data.data[index].quoteAuthor;
+                    index = (index + 1) % data.data.length;
+                }
+
+                updateQuote(); // Initial display
+                setInterval(updateQuote, 5000); // Update quote every 5 seconds
+            });
          </script>
 
     </body>
