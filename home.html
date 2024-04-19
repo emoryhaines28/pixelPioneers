@@ -80,9 +80,11 @@
 
             .quote-section {
                 background-color: #F5CC97; /* Light orange background */
-                padding: 50px;
+                padding: 20px;
                 margin-top: 0;
                 text-align: center;
+                margin-bottom: 0px;
+                
             }
 
             .quote-display p {
@@ -90,6 +92,9 @@
                 font-size: 24px; /* Keeping the font size consistent */
                 font-weight: bold;
                 font-family: 'American Typewriter', serif;
+                margin-top: 20px;
+                margin-left: 40px; 
+                margin-right: 40px;
             }
 
             #quoteAuthor {
@@ -101,9 +106,10 @@
             .reviewsection {
                 background-color: #F5CC97;
                 padding: 50px;
-                margin-bottom: 0;
-                padding-bottom: 0;
+                margin-bottom: 20px;
+                margin-top: 0px;
                 text-align: center;
+                
             }
 
             .reviews-container {
@@ -213,9 +219,17 @@
         </div>
 
         <section class="section2"> </section>
+
+        
+        <section class="quote-section">
+            <div class="quote-display">
+                <p id="quoteText">Loading quote...</p>
+                <p id="quoteAuthor"></p>
+            </div>
+        </section>
     
         <section class="reviewsection">
-            <div class="review">reviews</div>
+            <div class="review">Reviews</div>
             <div class="reviews-container">
                 <div class="fake-review">
                    <p>"Peau simplified my skincare routine. Their recommendations worked wonders for my skin, and their customer service was exceptional!"</p>
@@ -233,12 +247,6 @@
         </section>
 
 
-        <section class="quote-section">
-            <div class="quote-display">
-                <p id="quoteText">Loading quote...</p>
-                <p id="quoteAuthor"></p>
-            </div>
-        </section>
             
 
         <footer>
@@ -283,7 +291,7 @@
                 }
 
                 updateQuote(); // Initial display
-                setInterval(updateQuote, 5000); // Update quote every 5 seconds
+                setInterval(updateQuote, 10000); // Update quote every 5 seconds
             });
          </script>
 
