@@ -90,25 +90,25 @@
 
   <!-- Send to different skin pages based on the button clicked -->
   <div class="column" style=" background-color: #E8E2C5;">
-    <button onclick="window.location.href='dry.html'"> <h3>Dry Skin</h3></button>
+    <button onclick="window.location.href='dry.php?skintype=dry'"> <h3>Dry Skin</h3></button>
   </div>
 
   <div class="column" style=" background-color: #F5CC97;">
-    <button onclick="window.location.href='combination.html'"><h3> Combination Skin </h3></button>
+    <button onclick="window.location.href='combination.php?skintype=combination'"><h3> Combination Skin </h3></button>
   </div>
 
   <div class="column" style=" background-color: #fab875;">
-    <button onclick="window.location.href='oily.html'"><h3> Oily Skin </h3></button>
+    <button onclick="window.location.href='oily.php?skintype=oily'"><h3> Oily Skin </h3></button>
   </div>
 
   <script>
     document.addEventListener('DOMContentLoaded', function () {
-            const hamburger = document.querySelector('.hamburger');
-            const navLinks = document.querySelector('.navlinks');
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.navlinks');
 
-            hamburger.addEventListener('click', function () {
-                navLinks.classList.toggle('show');
-            });
+        hamburger.addEventListener('click', function () {
+            navLinks.classList.toggle('show');
+        });
     })
         
   </script>
