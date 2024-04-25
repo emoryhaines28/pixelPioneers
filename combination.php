@@ -100,10 +100,12 @@
          </div>
     
     <footer>
-        <div class="footercontent" >
-            <img src="images/logo.png" alt="Logo" class="logofoot"> 
-            <p>&copy;2024 peau.  All rights reserved.</p>
-        </div>
+    <div class="footercontent" >
+        <a href="home.html">
+          <img src="images/logo.png" alt="Logo" class="logofoot"> 
+        </a>
+          <p>&copy;2024 peau.  All rights reserved.</p>
+      </div>
     </footer>
     
     <script>
