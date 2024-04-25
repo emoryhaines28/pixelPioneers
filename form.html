@@ -145,7 +145,6 @@
             <a href="skincolumns.html" class="navlink">skin types</a>
             <a href="about.html" class="navlink">about us</a>
             <a href="contact.html" class="navlink">contact us</a>
-            <a href="diary.php" class="navlink">skin diary</a>
         </div>
         <a href="#" class="hamburger">&#9776;</a>      
     </div>
@@ -162,7 +161,7 @@
   <!-- Skin Form -->
   <div id="form-container">
   <h1>What is your skin type?</h1>
-	<form action='#' method='get' onsubmit="event.preventDefault(); processFormData()">
+	<form id="my_form" action="submit_form.php" method="post" onsubmit="event.preventDefault(); processFormData()">
     <label>Name:</label> <input type="text" name='name' id='the_name'>
     <br /><br />
     <label>Email:</label> <input type="text" name='email' id='the_email'>
@@ -217,7 +216,27 @@
   </div>
 
   <script>
-    
+    //check if form has been resubmitted from uploading info
+    const urlParams = new URLSearchParams(window.location.search);
+    const success = urlParams.get('success');
+    const name = urlParams.get('name');
+    const email = urlParams.get('email');
+    const cleanser = urlParams.get('cleanser');
+
+    // Check if the form was successfully submitted
+    if (success === 'true') {
+        // Call the showResultPopup() function with the retrieved parameters
+        var skinType = "Unknown";
+        if (cleanser == "oily") {
+            skinType = "Oily";
+        } else if (cleanser == "tight") {
+            skinType = "Dry";
+        } else if (cleanser == "balanced") {
+            skinType = "Combination";
+        }
+        showResultPopup(name, email, skinType);
+    }
+
     // Store form data 
     function processFormData() {
         // store text values
@@ -256,7 +275,8 @@
         } else if (cleanser == "balanced") {
             skinType = "Combination";
         } 
-    
+      // Submit the form programmatically
+      document.getElementById("my_form").submit();
       showResultPopup(name, email, skinType);
 
     }
