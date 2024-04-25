@@ -85,7 +85,7 @@ footer {
     }
 }
 
-@media screen and (max-width: 899px) {
+@media screen and (max-width: 1022px) {
     .hamburger {
         display: block;
         font-size: 40px;
