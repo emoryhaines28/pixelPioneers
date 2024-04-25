@@ -1,11 +1,12 @@
+<!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width", initial-scale="1">    
-        <title> homepage </title>
-        <link rel="stylesheet" href="mystyles.css">
-        <style type="text/css">
-            body {
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width", initial-scale="1">
+    <title>Homepage</title>
+    <link rel="stylesheet" href="mystyles.css">
+    <style type="text/css">
+         body {
                 background-image: url(); 
                 background-size: cover;
                 background-repeat: no-repeat;
@@ -185,118 +186,119 @@
                     display: none;
                 }
             }
-</style>  
-    </head>
-    <body>
-        <nav>
-            <div class="bar">
-                <a href="home.html">
-                    <img src="images/logo.png" alt="Logo" class="logo"> 
-                </a>
-                <div class="navlinks">
-                    <a href="form.html" class="navlink">your skin type</a>
-                    <a href="skincolumns.html" class="navlink">skin types</a>
-                    <a href="about.html" class="navlink">about us</a>
-                    <a href="contact.html" class="navlink">contact us</a>
-                    <a href="diary.php" class="navlink">skin diary</a>
-                </div>
-                <a href="#" class="hamburger">&#9776;</a>      
+    </style>
+</head>
+<body>
+<?php
+// Header content
+echo '<nav>
+        <div class="bar">
+            <a href="home.php">
+                <img src="images/logo.png" alt="Logo" class="logo"> 
+            </a>
+            <div class="navlinks">
+                <a href="form.php" class="navlink">your skin type</a>
+                <a href="skincolumns.php" class="navlink">skin types</a>
+                <a href="about.php" class="navlink">about us</a>
+                <a href="contact.php" class="navlink">contact us</a>
+                <a href="diary.php" class="navlink">skin diary</a>
             </div>
-        </nav>
-
-        <div class="spacer1">
-            <h1> peau is... </h1> 
-            <div class="fade">
-                skincare that's personal
-            </div>      
+            <a href="#" class="hamburger">&#9776;</a>
         </div>
+      </nav>';
+?>
 
-        <section class="section1"> </section>
-        
-        <div class="spacer2">
-            <div class="text" >
-                At Peau, we understand that everyone's skin is unique, and finding the right skincare routine can be challenging. That's why we've made it our mission to simplify the process for you. Our innovative platform asks the right questions to analyze your skin type accurately.
-            </div>
+<div class="spacer1">
+    <h1> peau is... </h1>
+    <div class="fade">
+        skincare that's personal
+    </div>
+</div>
+
+<section class="section1"></section>
+
+<div class="spacer2">
+    <div class="text" >
+        At Peau, we understand that everyone's skin is unique, and finding the right skincare routine can be challenging. That's why we've made it our mission to simplify the process for you. Our innovative platform asks the right questions to analyze your skin type accurately.
+    </div>
+</div>
+
+<section class="section2"></section>
+
+<section class="quote-section">
+    <div class="quote-display">
+        <p id="quoteText">Loading quote...</p>
+        <p id="quoteAuthor"></p>
+    </div>
+</section>
+
+<section class="reviewsection">
+    <div class="review">Reviews</div>
+    <div class="reviews-container">
+        <div class="fake-review">
+           <p>"Peau simplified my skincare routine. Their recommendations worked wonders for my skin, and their customer service was exceptional!"</p>
+            -Nicki M.
         </div>
+        <div class="fake-review">
+            <p>"Thanks to Peau, my skin has never looked better. Their platform made finding the right products effortless, and their support team was fantastic!"</p>
+            -Justin B.
+        </div>
+        <div class="fake-review">
+            <p>"Peau's personalized recommendations transformed my skincare routine. Effective products, excellent service - highly recommend!"</p> 
+          -Kim K.
+        </div>
+    </div>
+</section>
 
-        <section class="section2"> </section>
+<?php
+// Footer content
+echo '<footer>
+        <div class="footercontent">
+            <a href="home.php">
+              <img src="images/logo.png" alt="Logo" class="logofoot"> 
+            </a>
+            <p>&copy;2024 peau. All rights reserved.</p>
+        </div>
+      </footer>';
+?>
 
-        
-        <section class="quote-section">
-            <div class="quote-display">
-                <p id="quoteText">Loading quote...</p>
-                <p id="quoteAuthor"></p>
-            </div>
-        </section>
-    
-        <section class="reviewsection">
-            <div class="review">Reviews</div>
-            <div class="reviews-container">
-                <div class="fake-review">
-                   <p>"Peau simplified my skincare routine. Their recommendations worked wonders for my skin, and their customer service was exceptional!"</p>
-                    -Nicki M.
-                </div>
-                <div class="fake-review">
-                    <p>"Thanks to Peau, my skin has never looked better. Their platform made finding the right products effortless, and their support team was fantastic!"</p>
-                    -Justin B.
-                </div>
-                <div class="fake-review">
-                    <p>"Peau's personalized recommendations transformed my skincare routine. Effective products, excellent service - highly recommend!"</p> 
-                  -Kim K.
-                </div>
-            </div>
-        </section>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function() {
+        setTimeout(function() {
+            $('.fade').fadeTo(400, 1);
+            $('.text').fadeTo(300, 1);
+            $('.review').fadeTo(300, 1);
+        }, 300);
+    });
+</script>
+<script>
+   document.addEventListener('DOMContentLoaded', function () {
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.navlinks');
 
-
-            
-
-        <footer>
-            <div class="footercontent" >
-                <a href="home.html">
-                  <img src="images/logo.png" alt="Logo" class="logofoot"> 
-                </a>
-                  <p>&copy;2024 peau.  All rights reserved.</p>
-              </div>
-        </footer>
-
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>
-        $(document).ready(function() {
-            setTimeout(function() {
-                $('.fade').fadeTo(400, 1);
-                $('.text').fadeTo(300, 1);
-                $('.review').fadeTo(300, 1);
-            }, 300);
-         
+        hamburger.addEventListener('click', function () {
+            navLinks.classList.toggle('show');
         });
-    </script>
-        <script>
-           document.addEventListener('DOMContentLoaded', function () {
-            const hamburger = document.querySelector('.hamburger');
-            const navLinks = document.querySelector('.navlinks');
+    });
 
-            hamburger.addEventListener('click', function () {
-                navLinks.classList.toggle('show');
-            });
-            })
+    fetch("https://quote-garden.onrender.com/api/v3/quotes?genre=beauty")
+    .then(response => response.json())
+    .then(data => {
+        const quoteText = document.getElementById('quoteText');
+        const quoteAuthor = document.getElementById('quoteAuthor');
+        let index = 0;
 
-            fetch("https://quote-garden.onrender.com/api/v3/quotes?genre=beauty")
-            .then(response => response.json())
-            .then(data => {
-                const quoteText = document.getElementById('quoteText');
-                const quoteAuthor = document.getElementById('quoteAuthor');
-                let index = 0;
+        function updateQuote() {
+            quoteText.textContent = '"' + data.data[index].quoteText + '"';
+            quoteAuthor.textContent = '- ' + data.data[index].quoteAuthor;
+            index = (index + 1) % data.data.length;
+        }
 
-                function updateQuote() {
-                    quoteText.textContent = '"' + data.data[index].quoteText + '"';
-                    quoteAuthor.textContent = '- ' + data.data[index].quoteAuthor;
-                    index = (index + 1) % data.data.length;
-                }
+        updateQuote(); // Initial display
+        setInterval(updateQuote, 10000); // Update quote every 10 seconds
+    });
+ </script>
 
-                updateQuote(); // Initial display
-                setInterval(updateQuote, 10000); // Update quote every 5 seconds
-            });
-         </script>
-
-    </body>
+</body>
 </html>

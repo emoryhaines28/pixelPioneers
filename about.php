@@ -218,14 +218,14 @@
     <body>
         <nav>
             <div class="bar">
-                <a href="home.html">
+                <a href="home.php">
                     <img src="images/logo.png" alt="Logo" class="logo"> 
                 </a>
                 <div class="navlinks">
-                    <a href="form.html" class="navlink">your skin type</a>
-                    <a href="skincolumns.html" class="navlink">skin types</a>
-                    <a href="about.html" class="navlink">about us</a>
-                    <a href="contact.html" class="navlink">contact us</a>
+                    <a href="form.php" class="navlink">your skin type</a>
+                    <a href="skincolumns.php" class="navlink">skin types</a>
+                    <a href="about.php" class="navlink">about us</a>
+                    <a href="contact.php" class="navlink">contact us</a>
                     <a href="diary.php" class="navlink">skin diary</a>
                 </div>
                 <a href="#" class="hamburger">&#9776;</a>      
@@ -284,7 +284,7 @@
     </div>
         <footer>
             <div class="footercontent" >
-                <a href="home.html">
+                <a href="home.php">
                   <img src="images/logo.png" alt="Logo" class="logofoot"> 
                 </a>
                   <p>&copy;2024 peau.  All rights reserved.</p>
