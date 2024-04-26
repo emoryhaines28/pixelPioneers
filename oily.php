@@ -118,6 +118,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 <a href="skincolumns.html" class="navlink">skin types</a>
                 <a href="about.html" class="navlink">about us</a>
                 <a href="contact.html" class="navlink">contact us</a>
+                <a href="diary.php" class="navlink">skin diary</a>
             </div>
             <a href="#" class="hamburger">&#9776;</a>      
         </div>

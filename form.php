@@ -144,6 +144,7 @@
             <a href="skincolumns.php" class="navlink">skin types</a>
             <a href="about.php" class="navlink">about us</a>
             <a href="contact.php" class="navlink">contact us</a>
+            <a href="diary.php" class="navlink">skin diary</a>
         </div>
         <a href="#" class="hamburger">&#9776;</a>      
     </div>
