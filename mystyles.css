@@ -85,7 +85,7 @@ footer {
     }
 }
 
-@media screen and (max-width: 899px) {
+@media screen and (max-width: 1022px) {
     .hamburger {
         display: block;
         font-size: 40px;
@@ -136,4 +136,59 @@ footer {
     .footercontent {
         font-size: 10px;
     }
+}
+
+.filter-form {
+  margin-bottom: 40px;
+}
+
+.filter-form form {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.filter-form label {
+  font-weight: bold;
+}
+
+.filter-form select,
+.filter-form input[type="submit"] {
+  padding: 5px;
+}
+
+.filter-form input[type="submit"] {
+  background-color: #F55D33;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+.product-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.product-container .box {
+  text-align: center;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 10px;
+  display: flex; /* Add flex display */
+  flex-direction: column; /* Stack content vertically */
+}
+
+.product-container .box-content img {
+  max-width: 100%;
+  height: auto;
+}
+
+.product-container .text {
+  margin-top: 10px;
+  color: #333;
+}
+
+.product-container h2 {
+  clear: both;
 }

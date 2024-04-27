@@ -1,4 +1,3 @@
-<!doctype html>
 <html>
 <head>
 <meta charset="UTF-8">
@@ -137,14 +136,15 @@
   <!-- navigation bar -->
   <nav>
     <div class="bar">
-        <a href="home.html">
+        <a href="home.php">
             <img src="images/logo.png" alt="Logo" class="logo"> 
         </a>
         <div class="navlinks">
-            <a href="form.html" class="navlink">your skin type</a>
-            <a href="skincolumns.html" class="navlink">skin types</a>
-            <a href="about.html" class="navlink">about us</a>
-            <a href="contact.html" class="navlink">contact us</a>
+            <a href="form.php" class="navlink">your skin type</a>
+            <a href="skincolumns.php" class="navlink">skin types</a>
+            <a href="about.php" class="navlink">about us</a>
+            <a href="contact.php" class="navlink">contact us</a>
+            <a href="diary.php" class="navlink">skin diary</a>
         </div>
         <a href="#" class="hamburger">&#9776;</a>      
     </div>
@@ -152,16 +152,18 @@
 
   <!-- footer -->
   <footer>
-      <div class="footercontent" >
-          <img src="images/logo.png" alt="Logo" class="logofoot"> 
-          <p>&copy;2024 peau.  All rights reserved.</p>
-      </div>
+    <div class="footercontent" >
+      <a href="home.php">
+        <img src="images/logo.png" alt="Logo" class="logofoot"> 
+      </a>
+        <p>&copy;2024 peau.  All rights reserved.</p>
+    </div>
   </footer>
 
   <!-- Skin Form -->
   <div id="form-container">
   <h1>What is your skin type?</h1>
-	<form action='#' method='get' onsubmit="event.preventDefault(); processFormData()">
+	<form id="my_form" action="submit_form.php" method="post" onsubmit="event.preventDefault(); processFormData()">
     <label>Name:</label> <input type="text" name='name' id='the_name'>
     <br /><br />
     <label>Email:</label> <input type="text" name='email' id='the_email'>
@@ -216,7 +218,27 @@
   </div>
 
   <script>
-    
+    //check if form has been resubmitted from uploading info
+    const urlParams = new URLSearchParams(window.location.search);
+    const success = urlParams.get('success');
+    const name = urlParams.get('name');
+    const email = urlParams.get('email');
+    const cleanser = urlParams.get('cleanser');
+
+    // Check if the form was successfully submitted
+    if (success === 'true') {
+        // Call the showResultPopup() function with the retrieved parameters
+        var skinType = "Unknown";
+        if (cleanser == "oily") {
+            skinType = "Oily";
+        } else if (cleanser == "tight") {
+            skinType = "Dry";
+        } else if (cleanser == "balanced") {
+            skinType = "Combination";
+        }
+        showResultPopup(name, email, skinType);
+    }
+
     // Store form data 
     function processFormData() {
         // store text values
@@ -255,7 +277,8 @@
         } else if (cleanser == "balanced") {
             skinType = "Combination";
         } 
-    
+      // Submit the form programmatically
+      document.getElementById("my_form").submit();
       showResultPopup(name, email, skinType);
 
     }
@@ -303,11 +326,11 @@
     // Send to the correct page based on skin type
     function navigateToSkinPage(skinType) {
       if (skinType == "Oily") {
-          window.location.href = "oily.html";
+          window.location.href = "oily.php";
       } else if (skinType == "Dry") {
-          window.location.href = "dry.html";
+          window.location.href = "dry.php";
       } else {
-          window.location.href = "combination.html";
+          window.location.href = "combination.php";
       }
   }
 
@@ -326,6 +349,3 @@
 </body>
 
 </html>
-
-
-

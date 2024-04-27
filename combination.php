@@ -61,7 +61,56 @@
         h2 {
             clear: both;
         }
+
     </style>
+
+    <!-- Updated JavaScript code in combination.php -->
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const filterForm = document.querySelector('.filter-form form');
+    const productContainer = document.querySelector('.product-container');
+
+    filterForm.addEventListener('submit', function (event) {
+        event.preventDefault(); // Prevent default form submission
+
+        const formData = new FormData(filterForm); // Get form data
+        const url = filterForm.getAttribute('action'); // URL to send AJAX request
+
+        // Send AJAX request
+        fetch(url + '?' + new URLSearchParams(formData), {
+            method: 'GET',
+        })
+        .then(response => response.json()) // Parse response as JSON
+        .then(data => {
+            // Clear existing products in the container
+            productContainer.innerHTML = '';
+
+            // Check if data is not empty
+            if (data.length > 0) {
+                data.forEach(product => {
+                    // Create HTML for each product
+                    const productHTML = `
+                        <div class="box">
+                            <div class="box-content"><img src="images/${product.image}"></div>
+                            <p>Price: $${product.price}</p>
+                            <div class="text"><a href="${product.link}">${product.name}</a></div>
+                        </div>
+                    `;
+                    productContainer.insertAdjacentHTML('beforeend', productHTML); // Add product HTML to container
+                });
+            } else {
+                productContainer.innerHTML = '<p>No results found.</p>'; // Display message if no results
+            }
+        })
+        .catch(error => {
+            console.error('Error fetching data:', error);
+        });
+    });
+});
+
+</script>
+
 </head>
 <body>
     <nav>
@@ -74,6 +123,7 @@
                 <a href="skincolumns.html" class="navlink">skin types</a>
                 <a href="about.html" class="navlink">about us</a>
                 <a href="contact.html" class="navlink">contact us</a>
+                <a href="diary.php" class="navlink">skin diary</a>
             </div>
             <a href="#" class="hamburger">&#9776;</a>      
         </div>
@@ -92,11 +142,32 @@
 
           </br></br>These are our favorite products for combination skin and we hope you love them too!
         </div>
-        <div class="container">
-            <?php
-                include 'popproducts.php';
-            ?>
-         </div>
+       <div class="container">
+            <!-- Filter form with dropdown menus -->
+            <div class="filter-form">
+                <form action="popproducts.php" method="GET">
+                    <label for="sort">Sort By:</label>
+                    <select name="sort" id="sort">
+                        <option value="price_asc">Price Low to High</option>
+                        <option value="price_desc">Price High to Low</option>
+                    </select>
+                    <label for="category">Filter By Category:</label>
+                    <select name="category" id="category">
+                        <option value="">All Categories</option>
+                        <option value="cleanser">Cleansers</option>
+                        <option value="serum">Serums</option>
+                        <option value="moisturizer">Moisturizers</option>
+                        <option value="sunscreen">Sunscreens</option>
+                    </select>
+                     <input type="hidden" name="skintype" value="combination">
+                    <input type="submit" value="Apply Filters">
+                </form>
+            </div>
+            <!-- Products display section -->
+            <div class="product-container">
+                
+            </div>
+        </div>
     
     <footer>
         <div class="footercontent" >
