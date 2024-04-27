@@ -105,10 +105,10 @@
     </div>
   </footer>
 
-  <!-- Skin Form -->
+  <!-- Submission Form -->
   <div id="form-container">
   <h1>Enter your name and email to access your skin diary:</h1>
-	<form id="my_form" action="diary_info.php" method="post">
+	<form id="my_form" action="diary_info.php" method="post" onsubmit="event.preventDefault(); validateForm()">
     <label>Name:</label> <input type="text" name='name' id='the_name'><br><br>
     <label>Email:</label> <input type="text" name='email' id='the_email'><br>
     
@@ -117,15 +117,34 @@
   </div>
 
   <script>
-  // navigation link hamburger
-  document.addEventListener('DOMContentLoaded', function () {
-            const hamburger = document.querySelector('.hamburger');
-            const navLinks = document.querySelector('.navlinks');
+      //validate that the user filled out the form correctly
+      function validateForm() {
+        var name = document.getElementById('the_name').value.trim();
+        var email = document.getElementById('the_email').value.trim();
+        
+        if (name === '' || email === '') {
+            alert('Please enter a name and email');
+            return;
+        }
 
-            hamburger.addEventListener('click', function () {
-                navLinks.classList.toggle('show');
-            });
-            })
+        // Validate email address
+        var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+            alert("Please enter a valid email address.");
+            return;
+        }
+        document.getElementById("my_form").submit();
+    }
+
+    // navigation link hamburger
+    document.addEventListener('DOMContentLoaded', function () {
+                const hamburger = document.querySelector('.hamburger');
+                const navLinks = document.querySelector('.navlinks');
+
+                hamburger.addEventListener('click', function () {
+                    navLinks.classList.toggle('show');
+                });
+                })
         
   </script>
 

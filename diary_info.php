@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Skin Diary Display</title>
     <link rel="stylesheet" href="mystyles.css">
+    <!-- Internal Stylesheet -->
     <style>
         body {
-            font-family: Arial, sans-serif;
             background-color: #F8F4E3;
             margin: 0;
             padding: 0;
@@ -21,7 +21,7 @@
         }
 
         .skin_diary_container {
-            width: calc(60% - 30px); 
+            width: calc(100% - 400px); 
             margin-bottom: 20px; 
             justify-content: center;
             box-sizing: border-box;
@@ -29,38 +29,59 @@
         }
 
         .wishlist_container {
-            width: calc(40% - 60px); 
+            width: 325px; 
             margin-bottom: 20px; 
-            justify-content: center;
+            margin: 0 auto;
             box-sizing: border-box;
             color: #F55D33;
         }
 
         @media (max-width: 925px) { 
-            .skin_diary_container {
-                width: 100%;
-                margin-right: 0 !important;
-            }
+            .skin_diary_container,
             .wishlist_container {
                 width: 100%;
-                margin-right: 0 !important;
             }
         }
 
         .entry-box {
-            border: 5px solid #F55D33;
+            border: 5px solid #F5CC97;
             padding: 10px;
             margin-bottom: 20px;
             border-radius: 5px;
         }
         .wishlist-box{
-            border: 5px solid #F55D33;
+            border: 5px solid #F5CC97;
             padding: 10px;
-            margin-bottom: 20px;
             border-radius: 5px;
             min-height: 325px;
             max-width: 350px;
+            margin: 0 auto;
+            margin-bottom: 20px;
         }
+        input[type="submit"] {
+            background-color: #F55D33; 
+            color: #F8F4E3;
+            border: none;
+            padding: 7px 15px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            border-radius: 7px;
+            font-family: 'American Typewriter', serif;
+            display: block;
+                margin: 0 auto;
+            margin-bottom: 75px;
+        }
+
+        input[type="submit"]:hover {
+                    background-color: #FF6347;
+        }
+
+        .date {
+            margin-top: 15px;
+        }
+   
     </style>
 </head>
 <body>
@@ -104,28 +125,37 @@
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
     }
-
-    // Step 2: Retrieve user's data from the form
-    //if (isset($_POST['email'])) {
-    //    $email = $_POST['email'];
-    //} else {
-    //    $email = "No email provided";
-    //}
-    //if (isset($_POST['name'])) {
-    //    $name = $_POST['name'];
-    //} else {
-    //    $name = "No name provided";
-    //}
     
-    $name = "Isabelle";
-    $email = "0@gmail.com";
+    $name = "No name provided";
+    $email = "No email provided";
+
+    // Retrieve user's data from the form
+    if (isset($_POST['email'])) {
+        $email = $_POST['email'];
+    }
+    if (isset($_POST['name'])) {
+        $name = $_POST['name'];
+    }
+
+    // Form submission handling for adding items to wishlist
+    if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["self-submission"])) {
+        // Retrieve form data from the self-submitting form
+        $name = $_POST["name"];
+        $email = $_POST["email"];
+        $item = $_POST["item"];
+        
+        // Insert the item into the wishlist table
+        $sql_insert = "INSERT INTO wishlist (email, item) VALUES ('$email', '$item')";
+        $conn->query($sql_insert);
+    }
+
     ?>
     <div class="skin_diary_container" label="skin_diary" style="margin-right: auto; text-align: center;">
         <!-- skin diary -->
         <?php
-            echo "<h3>$name's Skin Diary</h3>";
+            echo "<h2>$name's Skin Diary</h2>";
 
-            //get data from email
+            //get data from db
             $sql = "SELECT * FROM skin_type_form WHERE email = '$email' ORDER BY id DESC";
             $result = $conn->query($sql);
 
@@ -159,7 +189,7 @@
     <div class="wishlist_container" label="wishlist" style="text-align: center;">
         <!-- wishlist -->
         <?php
-            echo "<h3>$name's Wishlist</h3>";
+            echo "<h2>$name's Wishlist</h2>";
             echo "<div class='wishlist-box'>";
             
             // Retrieve wishlist items for the given email
@@ -174,11 +204,24 @@
                 }
                 echo "</ul>";
             } else {
-                echo "Type in an item to add it to the wishlist!";
+                echo "Type in an item to add it to your wishlist!";
             }
             
             echo "</div>";
-        ?>
+
+            echo "add an item to your wishlist:";?>
+            <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">            
+            <?php
+            echo "<input type='text' name='item'>";
+            echo "<input type='hidden' name='email' value='$email'>";
+            echo "<input type='hidden' name='name' value='$name'>";
+            echo "<br><br>";
+            echo "<input type='submit' name='self-submission' value='add'>";
+            echo "</form>";
+
+        ?>  
+        </form>
+ 
     </div>
 
 </div>

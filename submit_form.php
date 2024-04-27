@@ -16,14 +16,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     // Prepare SQL statement to insert data into your database
-    $sql = "INSERT INTO skin_type_form (name, email, notifications, foundation_experience, pore_size, cleanser_reaction, breakout_frequency, toner_feel)
-            VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+    $sql = "INSERT INTO skin_type_form (date, name, email, notifications, foundation_experience, pore_size, cleanser_reaction, breakout_frequency, toner_feel)
+            VALUES (NOW(),?, ?, ?, ?, ?, ?, ?, ?)";
 
     
     // Get form data from $_POST array
     $name = $_POST['name'];
     $email = $_POST['email'];
-    $notifications = $_POST['email_consent']; // Use email_consent to populate notifications column
+    $notifications = $_POST['email_consent']; 
     $foundation_experience = "";
     if(isset($_POST['slide']) && $_POST['slide'] == "Makeupslide") {
         $foundation_experience .= "Makeup tends to slide off easily, ";

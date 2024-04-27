@@ -171,11 +171,11 @@
     <label>Do you consent to email notifications?</label> 
     <div class="radio-group">
       <div>
-        <input type="radio" id="consent_yes" name="email_consent" value="yes"> 
+        <input type="radio" id="consent_yes" name="email_consent" value=1> 
         <label for="consent_yes">Yes</label>
       </div>
       <div>
-        <input type="radio" id="consent_no" name="email_consent" value="no"> 
+        <input type="radio" id="consent_no" name="email_consent" value=0> 
         <label for="consent_no">No</label>
       </div>
     </div>
