@@ -20,15 +20,28 @@
             margin-top: 115px;
         }
 
-        .box {
-            width: calc(50% - 30px); 
+        .skin_diary_container {
+            width: calc(60% - 30px); 
             margin-bottom: 20px; 
+            justify-content: center;
+            box-sizing: border-box;
+            color: #F55D33;
+        }
+
+        .wishlist_container {
+            width: calc(40% - 60px); 
+            margin-bottom: 20px; 
+            justify-content: center;
             box-sizing: border-box;
             color: #F55D33;
         }
 
         @media (max-width: 925px) { 
-            .box {
+            .skin_diary_container {
+                width: 100%;
+                margin-right: 0 !important;
+            }
+            .wishlist_container {
                 width: 100%;
                 margin-right: 0 !important;
             }
@@ -46,6 +59,7 @@
             margin-bottom: 20px;
             border-radius: 5px;
             min-height: 325px;
+            max-width: 350px;
         }
     </style>
 </head>
@@ -106,7 +120,7 @@
     $name = "Isabelle";
     $email = "0@gmail.com";
     ?>
-    <div class="box" label="skin_diary" style="margin-right: auto; text-align: center;">
+    <div class="skin_diary_container" label="skin_diary" style="margin-right: auto; text-align: center;">
         <!-- skin diary -->
         <?php
             echo "<h3>$name's Skin Diary</h3>";
@@ -120,7 +134,7 @@
                 while ($row = $result->fetch_assoc()) {
                     echo "<div class='entry-box'>";
                     foreach ($row as $key => $value) {
-                        // show only certain info
+                        // show only skin related questions
                         if ($key === 'date') {
                             echo "<div class='date'><strong>$key:</strong> <br>$value</div><br>";
                         } if ($key === 'foundation_experience') {
@@ -142,7 +156,7 @@
             }
         ?>
     </div>
-    <div class="box" label="wishlist" style="margin-left: auto; text-align: center;">
+    <div class="wishlist_container" label="wishlist" style="text-align: center;">
         <!-- wishlist -->
         <?php
             echo "<h3>$name's Wishlist</h3>";
@@ -160,7 +174,7 @@
                 }
                 echo "</ul>";
             } else {
-                echo "type in an item to add it to the wishlist!";
+                echo "Type in an item to add it to the wishlist!";
             }
             
             echo "</div>";
