@@ -1,5 +1,6 @@
 # pixelPioneers
 CS 20 Web Programming (Tufts University) Final
+
 Emory Haines, Maddy Dumont, Emilia Nathan, and Isabelle Bain
 Name of Company: peau
 
