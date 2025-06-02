@@ -1,10 +1,9 @@
 # pixelPioneers
-Web Midterm
-
+CS 20 Web Programming (Tufts University) Final
 Emory Haines, Maddy Dumont, Emilia Nathan, and Isabelle Bain
+Name of Company: peau
 
-Name of Company
-peau
+This is an interactive skincare web application that helps users determine their skin type, receive personalized product recommendations, and purchase skincare items directly via an integrated Amazon storefront. The app utilizes an external API, backend logic, and a custom-built database.
 
 Requirements Breakdown
 8 pages total 
@@ -13,20 +12,19 @@ H1 on each page - done
 
 javascript is used for the hamburger nav links 
 
-meta keywords on each page - done
+meta keywords on each page 
 
 all images are the correct size
 
 mobile friendly
 
 includes at least 3 
--function - done
+-function
 
 home.html 
 -background image
 -site “logo” to return to home page
 - jquuery special effect
--Needs an H1******************
 
 about.html
 - ol and ul, list
@@ -49,13 +47,8 @@ External style sheet
 -Footer fixed on every page
 
 
-Final Presentation Tasks
-Amazon Affiliate: Emory, link to dry.html,
-oily.html, combination.html
-
+Some Tasks:
+Amazon Affiliate: Emory, link to dry.html, oily.html, combination.html
 User Database: Isabelle - form.html/contact.html
-
-Product Database: Emilia - external and then link to dry.html,
-oily.html, combination.html
-
+Product Database: Emilia - external and then link to dry.html, oily.html, combination.html
 API Integration: Maddy - form.html
